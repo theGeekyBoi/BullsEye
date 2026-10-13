@@ -1,0 +1,22 @@
+# Downloaded datasets and generated examples
+data/raw/
+data/processed/
+data/sample/
+*.zip
+
+# Model artifacts and local configuration
+models/
+checkpoints/
+.env
+.env.*
+!.env.example
+
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db

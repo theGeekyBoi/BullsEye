@@ -1,0 +1,51 @@
+sector,ticker,company,price_days_2017_2023,news_train_2017_2020,news_validation_2021,news_test_2022_2023,full_text_train_2017_2020
+Technology,AMD,Advanced Micro Devices,1759,4269,812,4024,4019
+Technology,INTC,Intel,1759,3968,1212,3512,3958
+Technology,ADBE,Adobe,1759,2248,417,1711,1551
+Technology,CRM,Salesforce,1759,2914,750,2329,1954
+Technology,QCOM,Qualcomm,1759,3274,568,1912,1782
+Technology,MU,Micron Technology,1759,4650,547,1616,3165
+Technology,ORCL,Oracle,1759,2473,452,1304,1766
+Technology,AMAT,Applied Materials,1760,2131,357,983,1499
+Financial services,WFC,Wells Fargo,1759,5038,857,2036,3900
+Financial services,GS,Goldman Sachs,1759,3368,1436,3180,3368
+Financial services,MS,Morgan Stanley,1759,2933,889,2244,2098
+Financial services,V,Visa,1759,2359,714,2146,2349
+Financial services,USB,U.S. Bancorp,1759,1211,197,852,884
+Financial services,BK,Bank of New York Mellon,1759,785,172,609,535
+Financial services,CME,CME Group,1759,995,185,516,731
+Health care,MRK,Merck & Co.,1759,3971,884,2058,2669
+Health care,ABBV,AbbVie,1759,2467,551,1777,2049
+Health care,AMGN,Amgen,1759,1922,330,1319,1772
+Health care,GILD,Gilead Sciences,1759,4308,399,1033,3044
+Health care,ABT,Abbott Laboratories,1759,1426,432,1347,1426
+Health care,DHR,Danaher,1759,1043,142,594,784
+Health care,CI,The Cigna Group,1759,1299,166,739,730
+Energy,XOM,Exxon Mobil,1759,2162,1242,3937,1578
+Energy,CVX,Chevron,1759,3567,983,3799,3567
+Energy,COP,ConocoPhillips,1759,2059,335,1462,1566
+Energy,EOG,EOG Resources,1759,1314,200,801,964
+Energy,OXY,Occidental Petroleum,1759,1737,362,1794,1178
+Energy,HAL,Halliburton,1760,1692,241,965,1139
+Energy,VLO,Valero Energy,1759,851,181,1072,538
+Consumer,WMT,Walmart,1759,3489,1486,3710,3479
+Consumer,COST,Costco Wholesale,1759,2379,525,2237,2379
+Consumer,NKE,Nike,1759,2722,730,1885,2722
+Consumer,KO,The Coca-Cola Company,1759,3225,556,2261,2447
+Consumer,PEP,PepsiCo,1759,2176,455,1691,1503
+Consumer,TJX,TJX Companies,1759,1413,170,717,937
+Industrial,CAT,Caterpillar,1759,2862,363,1414,1889
+Industrial,DE,Deere & Company,1759,1580,273,1159,907
+Industrial,GE,General Electric,1759,3983,677,1329,3983
+Industrial,BA,Boeing,1759,4055,677,1343,4045
+Industrial,UPS,United Parcel Service,1759,1307,387,1240,1217
+Industrial,FDX,FedEx,1759,2507,413,1314,1437
+Communication,DIS,The Walt Disney Company,1759,2978,1741,4002,2968
+Communication,CMCSA,Comcast,1759,3569,525,1361,2566
+Communication,T,AT&T,1759,5139,1219,2352,5129
+Communication,TMUS,T-Mobile US,1759,1983,364,1043,1573
+Communication,GOOG,Alphabet (Class C),1759,4264,1472,4189,3065
+Communication,EA,Electronic Arts,1759,2053,354,644,1310
+Utilities,NEE,NextEra Energy,1759,1902,317,1408,1633
+Utilities,DUK,Duke Energy,1759,1189,160,701,943
+Utilities,D,Dominion Energy,1759,1225,146,593,971
