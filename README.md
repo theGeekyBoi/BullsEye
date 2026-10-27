@@ -23,3 +23,47 @@ The rules and company group were drafted before any model was trained. The data 
 The core source is [FNSPID](https://huggingface.co/datasets/Zihan1004/FNSPID), including its `Stock_price/full_history.zip`, `Stock_news/nasdaq_exteral_data.csv`, and `Stock_news/All_external.csv` files. [Financial PhraseBank](https://huggingface.co/datasets/takala/financial_phrasebank) is optional for a news-tone component. [FinBERT pretrain](https://huggingface.co/yiyanghkust/finbert-pretrain) is the starting text model.
 
 Large datasets, downloaded news text, trained weights, and private configuration files should stay outside this public repository. The small raw-data audit sample is kept separately from the repository while redistribution rights are checked.
+
+## Qualitative News Prep
+
+The first qualitative-data script is `processing/qual_prep.py`. It prepares a pilot news file for `AMD`, `WFC`, and `MRK` from FNSPID's Nasdaq news data.
+
+Place the downloaded Nasdaq file here:
+
+```text
+data/raw/nasdaq_exteral_data.csv
+```
+
+Install the Python dependency if needed:
+
+```powershell
+pip install pandas
+```
+
+Run the script from the repository root:
+
+```powershell
+python processing/qual_prep.py
+```
+
+Or use `processing/qual_prep.ipynb` to run the same workflow step by step. The notebook is useful after the first raw-data scan because it can load existing processed outputs instead of rereading the full Nasdaq file every time. If preprocessing code changes, set `REBUILD_ARTICLES = True` in the notebook setup cell once, rerun the processing cells, then set it back to `False`.
+
+The script and notebook read the raw CSV in chunks, keep only pilot-company rows, remove exact duplicate article rows, add a stable `article_id`, add a conservative `eligible_date`, and create blank review columns for later manual annotation.
+
+The output is written to:
+
+```text
+data/processed/qualitative/pilot_nasdaq_articles.csv
+```
+
+If `data/processed/trading_calendar.csv` exists with `date`, `open_et`, `close_et`, and `early_close` columns, the script uses `date` and `close_et` to assign article eligibility and also creates a simple company-day news table:
+
+```text
+data/processed/qualitative/pilot_company_day_news.csv
+```
+
+That file has one row per pilot company per trading day, with comma-separated `article_ids`, `article_count`, and `no_news`.
+
+Do not commit the raw or processed article datasets. The processed file still contains article text and may be large, so it belongs in local storage. Commit the preparation code, project rules, and lightweight reports instead.
+
+Local generated directories such as `data/raw/`, `data/processed/`, `data/sample/`, `processing/__pycache__/`, and `.ipynb_checkpoints/` are ignored by Git. Keep `data/raw/` if you do not want to redownload the Nasdaq file. It is safe to delete `processing/__pycache__/` and any `.ipynb_checkpoints/` directories. If processed outputs were created before a preprocessing fix, delete `data/processed/qualitative/` or rebuild it from the notebook.

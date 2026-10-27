@@ -1,7 +1,11 @@
 # Downloaded datasets and generated examples
-data/raw/
-data/processed/
-data/sample/
+data/raw/**
+data/processed/**
+data/sample/**
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/sample/.gitkeep
+!data/README.md
 *.zip
 
 # Model artifacts and local configuration
@@ -13,9 +17,11 @@ checkpoints/
 
 # Python and notebooks
 __pycache__/
+**/__pycache__/
 *.py[cod]
 .venv/
 .ipynb_checkpoints/
+**/.ipynb_checkpoints/
 
 # System files
 .DS_Store
