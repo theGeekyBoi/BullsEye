@@ -10,6 +10,18 @@ BullsEye is an advanced machine learning course project that compares price hist
 
 The rules and company group were drafted before any model was trained. The data audit establishes that the required raw fields are available for this group. It also identifies news-timing and relevance checks that must be completed before training.
 
+## Current development work
+
+- [Quantitative data preparation scripts](Quantitative%20Data%20Prep/readme.md) and [30-session dataset](final_dataset/dataset_summary.csv)
+- [Price-only training instructions](price_only/README.md)
+- [First 2021 validation results and predictions](results/price_only/dev_2020_2021_seed42/README.md)
+
+The current quantitative prototype was built from Yahoo Finance price data and
+covers a different 50-company group from the original FNSPID audit. Its
+2020–2026 period must be reconciled with available news and the project rules
+before the final multimodal comparison. The first price-only run uses 2020 for
+training and 2021 for validation; it makes no final-test performance claim.
+
 ## Planned build order
 
 1. Clean the selected price and news records and construct one example per company and date.
@@ -20,6 +32,6 @@ The rules and company group were drafted before any model was trained. The data 
 
 ## Data
 
-The core source is [FNSPID](https://huggingface.co/datasets/Zihan1004/FNSPID), including its `Stock_price/full_history.zip`, `Stock_news/nasdaq_exteral_data.csv`, and `Stock_news/All_external.csv` files. [Financial PhraseBank](https://huggingface.co/datasets/takala/financial_phrasebank) is optional for a news-tone component. [FinBERT pretrain](https://huggingface.co/yiyanghkust/finbert-pretrain) is the starting text model.
+The original proposal centered on [FNSPID](https://huggingface.co/datasets/Zihan1004/FNSPID), including its `Stock_price/full_history.zip`, `Stock_news/nasdaq_exteral_data.csv`, and `Stock_news/All_external.csv` files. The current quantitative prototype instead uses Yahoo Finance prices, as documented in the preparation scripts. [Financial PhraseBank](https://huggingface.co/datasets/takala/financial_phrasebank) is optional for a news-tone component. [FinBERT pretrain](https://huggingface.co/yiyanghkust/finbert-pretrain) is the starting text model.
 
 Large datasets, downloaded news text, trained weights, and private configuration files should stay outside this public repository. The small raw-data audit sample is kept separately from the repository while redistribution rights are checked.
