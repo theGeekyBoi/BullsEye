@@ -1,1 +1,4 @@
-final_dataset/quant_dataset_30day.csv filter=lfs diff=lfs merge=lfs -text
+data/quantitative_dataset/quant_dataset_30day.csv filter=lfs diff=lfs merge=lfs -text
+data/qualitative_dataset/nasdaq_unique_articles_2020_2023.csv filter=lfs diff=lfs merge=lfs -text
+data/qualitative_dataset/nasdaq_article_company_links_2020_2023.csv filter=lfs diff=lfs merge=lfs -text
+data/qualitative_dataset/company_day_news_window_5session.csv filter=lfs diff=lfs merge=lfs -text

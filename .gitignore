@@ -2,10 +2,15 @@
 data/raw/**
 data/processed/**
 data/sample/**
+data/qualitative_dataset/**
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/sample/.gitkeep
 !data/README.md
+!data/qualitative_dataset/
+!data/qualitative_dataset/nasdaq_unique_articles_2020_2023.csv
+!data/qualitative_dataset/nasdaq_article_company_links_2020_2023.csv
+!data/qualitative_dataset/company_day_news_window_5session.csv
 *.zip
 
 # Model artifacts and local configuration
