@@ -39,7 +39,8 @@ def xgb_fit(x_train: np.ndarray, y_train: np.ndarray, x_valid: np.ndarray,
 
 
 def tune(frame: pd.DataFrame, company: np.ndarray, market: np.ndarray,
-         y: np.ndarray, output: Path, model_dir: Path, data_path: Path) -> None:
+         y: np.ndarray, output: Path, model_dir: Path, data_path: Path,
+         companies_path: Path) -> None:
     output.mkdir(parents=True, exist_ok=True)
     model_dir.mkdir(parents=True, exist_ok=True)
     configs = []
@@ -136,7 +137,8 @@ def tune(frame: pd.DataFrame, company: np.ndarray, market: np.ndarray,
     (output / "rolling_trials.json").write_text(json.dumps(trials, indent=2), encoding="utf-8")
     (output / "run_manifest.json").write_text(json.dumps({"chosen": settings, "seeds": [42,123],
         "development_data_sha256": sha256(data_path),
-        "company_list_sha256": sha256(Path("COMPANIES.csv")),
+        "company_list_sha256": sha256(companies_path),
+        "company_list_path": str(companies_path),
         "training_years": [2017,2018,2019,2020], "validation_year": 2021,
         "reserved_test_years": [2022,2023], "train_rows": int(tr.sum()),
         "validation_rows": int(va.sum()), "xgboost_version": xgb.__version__,
@@ -149,11 +151,12 @@ def main() -> None:
     parser.add_argument("--data", type=Path, default=Path("data_local/price_v2_original_50_2017_2023.csv"))
     parser.add_argument("--output", type=Path, default=Path("results/price_only_v2/tabular"))
     parser.add_argument("--model-dir", type=Path, default=Path("models/price_only_v2/tabular"))
+    parser.add_argument("--companies", type=Path, default=Path("COMPANIES.csv"))
     args = parser.parse_args()
     frame = read_development(args.data)
     company, market = windows(frame)
     y = frame.target_excess_return.to_numpy(dtype=np.float64)
-    tune(frame, company, market, y, args.output, args.model_dir, args.data)
+    tune(frame, company, market, y, args.output, args.model_dir, args.data, args.companies)
 
 
 if __name__ == "__main__":

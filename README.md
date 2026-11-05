@@ -8,6 +8,7 @@ BullsEye is an advanced machine learning course project that compares price hist
 - [Initial FNSPID data audit](DATA_AUDIT.md)
 - [Current 50-company list and date counts](final_dataset/dataset_summary.csv)
 - [Shared price, news, and prediction contract](EXPERIMENT_CONTRACT.md)
+- [Current news-coverage follow-up for the team](To%20Do/02_CURRENT_NEWS_COVERAGE.md)
 - [Earlier proposed 50-company list (archived)](COMPANIES.csv)
 
 The current company group is the one used in the qualitative preparation branch. The initial FNSPID audit examined a different group and remains background material. News timing and relevance checks must be completed before combined-model training.
@@ -17,6 +18,7 @@ The current company group is the one used in the qualitative preparation branch.
 - [Quantitative data preparation scripts](Quantitative%20Data%20Prep/readme.md) and [30-session dataset](final_dataset/dataset_summary.csv)
 - [Price-only training instructions](price_only/README.md)
 - [First 2021 validation results and predictions](results/price_only/dev_2020_2021_seed42/README.md)
+- [Current 50-company price rebuild and 2021 results](results/price_only_current/README.md)
 - [Earlier 50-company price rebuild (archived)](price_only_v2/README.md)
 - [Earlier rebuild audit and 2021 validation report (archived)](results/price_only_v2/README.md)
 
@@ -26,10 +28,11 @@ currently prepared for 2020–2023, so 2024–2026 price dates are outside the
 main combined-model comparison. The first price-only run uses 2020 for
 training and 2021 for validation; it makes no final-test performance claim.
 
-The separate `price_only_v2/` rebuild used the earlier 50 in `COMPANIES.csv`
-and added 2017–2019 history and SPY inputs. It remains an archived experiment.
-**Its saved predictions and validation scores are not current-universe
-baselines.** Rerun those methods on the current 50 before comparing with news.
+The `price_only_v2/` code has now also rebuilt and trained the current 50,
+adding 2017–2019 history for companies with price data and SPY inputs. Its
+current-universe 2021 predictions and audit are under `results/price_only_current/`.
+The separate `results/price_only_v2/` predictions remain an archived
+experiment for the earlier 50 and must not be mixed with current news results.
 
 ## Planned build order
 

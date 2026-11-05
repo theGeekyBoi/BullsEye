@@ -1,0 +1,140 @@
+{
+  "chosen": {
+    "ridge": {
+      "selected_from": "2018-2020 rolling validation",
+      "family": "ridge",
+      "lookback": 5,
+      "alpha": 100.0,
+      "market": true,
+      "volume": false,
+      "fold_years": [
+        2018,
+        2019,
+        2020
+      ],
+      "fold_ranking": [
+        0.05888128422100547,
+        0.04541270759315871,
+        0.06902490028269373
+      ],
+      "fold_mae_pp": [
+        2.2413171692553373,
+        1.9633790313485913,
+        2.9802332155626465
+      ],
+      "mean_ranking": 0.05777296403228597,
+      "mean_mae_pp": 2.394976472055525,
+      "feature_names": [
+        "company_return_1",
+        "company_return_3",
+        "company_return_4",
+        "company_volatility_5",
+        "company_intraday_5",
+        "company_range_5",
+        "company_last_intraday",
+        "company_last_range",
+        "spy_return_1",
+        "spy_return_3",
+        "spy_return_4",
+        "spy_volatility_5",
+        "spy_intraday_5",
+        "spy_range_5",
+        "spy_last_intraday",
+        "spy_last_range",
+        "relative_return_1",
+        "relative_return_3",
+        "relative_return_4",
+        "sector_Communication",
+        "sector_Consumer",
+        "sector_Energy",
+        "sector_Financial services",
+        "sector_Health care",
+        "sector_Industrial",
+        "sector_Technology",
+        "sector_Utilities"
+      ]
+    },
+    "xgboost": {
+      "selected_from": "2018-2020 rolling validation",
+      "family": "xgboost",
+      "lookback": 5,
+      "depth": 3,
+      "market": true,
+      "volume": false,
+      "fold_years": [
+        2018,
+        2019,
+        2020
+      ],
+      "fold_ranking": [
+        0.030745105945119724,
+        0.06156139110099319,
+        0.07125067868557415
+      ],
+      "fold_mae_pp": [
+        2.220499469293693,
+        1.9593842270370505,
+        2.991944957897801
+      ],
+      "mean_ranking": 0.054519058577229024,
+      "mean_mae_pp": 2.390609551409515,
+      "best_rounds_by_fold": [
+        40,
+        40,
+        70
+      ],
+      "fixed_final_rounds": 40,
+      "feature_names": [
+        "company_return_1",
+        "company_return_3",
+        "company_return_4",
+        "company_volatility_5",
+        "company_intraday_5",
+        "company_range_5",
+        "company_last_intraday",
+        "company_last_range",
+        "spy_return_1",
+        "spy_return_3",
+        "spy_return_4",
+        "spy_volatility_5",
+        "spy_intraday_5",
+        "spy_range_5",
+        "spy_last_intraday",
+        "spy_last_range",
+        "relative_return_1",
+        "relative_return_3",
+        "relative_return_4",
+        "sector_Communication",
+        "sector_Consumer",
+        "sector_Energy",
+        "sector_Financial services",
+        "sector_Health care",
+        "sector_Industrial",
+        "sector_Technology",
+        "sector_Utilities"
+      ]
+    }
+  },
+  "seeds": [
+    42,
+    123
+  ],
+  "development_data_sha256": "bc8d75184e65b8c8e5a9c8f84eaf36c455b2fd26f6dd031faca59a467ead5fad",
+  "company_list_sha256": "ce84c36e6af80875a04a9272477e5adacb8eca35215bf4b2ae21ac9c4938012b",
+  "company_list_path": "CURRENT_COMPANIES.csv",
+  "training_years": [
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "validation_year": 2021,
+  "reserved_test_years": [
+    2022,
+    2023
+  ],
+  "train_rows": 49129,
+  "validation_rows": 12350,
+  "xgboost_version": "3.4.1",
+  "sklearn_version": "1.9.1"
+}

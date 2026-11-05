@@ -1,0 +1,207 @@
+{
+  "development_data_sha256": "bc8d75184e65b8c8e5a9c8f84eaf36c455b2fd26f6dd031faca59a467ead5fad",
+  "company_list_sha256": "ce84c36e6af80875a04a9272477e5adacb8eca35215bf4b2ae21ac9c4938012b",
+  "company_list_path": "CURRENT_COMPANIES.csv",
+  "training_years": [
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "checkpoint_year": 2020,
+  "validation_year": 2021,
+  "reserved_test_years": [
+    2022,
+    2023
+  ],
+  "runs": {
+    "lstm_ohlc_seed42": {
+      "seed": 42,
+      "include_volume": false,
+      "market_context": true,
+      "selected_epoch_on": 2020,
+      "selected_epoch": 1,
+      "tuning_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.5626215299226058,
+          "rank": 0.03422873988304999,
+          "mae_pp": 2.981963883358878
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.5559753411758344,
+          "rank": 0.03265978972234054,
+          "mae_pp": 2.9828002667325015
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.5558118553324807,
+          "rank": 0.033068654881307356,
+          "mae_pp": 2.9825981899736957
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.5553706455989473,
+          "rank": 0.028375140378732133,
+          "mae_pp": 2.982269563384594
+        }
+      ],
+      "final_training_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.7990925283167427,
+          "rank": -0.017769245349961844,
+          "mae_pp": 2.3904084549728113
+        }
+      ]
+    },
+    "lstm_ohlc_seed123": {
+      "seed": 123,
+      "include_volume": false,
+      "market_context": true,
+      "selected_epoch_on": 2020,
+      "selected_epoch": 1,
+      "tuning_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.5626215299226058,
+          "rank": 0.03422873988304999,
+          "mae_pp": 2.981963883358878
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.5559753411758344,
+          "rank": 0.03265978972234054,
+          "mae_pp": 2.9828002667325015
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.5558118553324807,
+          "rank": 0.033068654881307356,
+          "mae_pp": 2.9825981899736957
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.5553706455989473,
+          "rank": 0.028375140378732133,
+          "mae_pp": 2.982269563384594
+        }
+      ],
+      "final_training_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.7983984193159548,
+          "rank": -0.01978877380911879,
+          "mae_pp": 2.3884055849957666
+        }
+      ]
+    },
+    "lstm_ohlcv_seed42": {
+      "seed": 42,
+      "include_volume": true,
+      "market_context": true,
+      "selected_epoch_on": 2020,
+      "selected_epoch": 2,
+      "tuning_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.5563226183936536,
+          "rank": 0.05716299422995003,
+          "mae_pp": 2.9817139840807827
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.5546188976247513,
+          "rank": 0.062289068853347784,
+          "mae_pp": 2.982474394668083
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.5532455017597797,
+          "rank": 0.05427729156178599,
+          "mae_pp": 2.980931450687237
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.552381431987242,
+          "rank": 0.03896749022189521,
+          "mae_pp": 2.9817117469766474
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.5515130522991636,
+          "rank": 0.045134061689191804,
+          "mae_pp": 2.981525710271817
+        }
+      ],
+      "final_training_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.7959887769488247,
+          "rank": 0.006390831636298244,
+          "mae_pp": 2.3910634770459467
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.7926324004933225,
+          "rank": 0.01988403458549411,
+          "mae_pp": 2.3919815680672905
+        }
+      ]
+    },
+    "lstm_ohlcv_seed123": {
+      "seed": 123,
+      "include_volume": true,
+      "market_context": true,
+      "selected_epoch_on": 2020,
+      "selected_epoch": 2,
+      "tuning_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.5563226183936536,
+          "rank": 0.05716299422995003,
+          "mae_pp": 2.9817139840807827
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.5546188976247513,
+          "rank": 0.062289068853347784,
+          "mae_pp": 2.982474394668083
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.5532455017597797,
+          "rank": 0.05427729156178599,
+          "mae_pp": 2.980931450687237
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.552381431987242,
+          "rank": 0.03896749022189521,
+          "mae_pp": 2.9817117469766474
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.5515130522991636,
+          "rank": 0.045134061689191804,
+          "mae_pp": 2.981525710271817
+        }
+      ],
+      "final_training_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.7986810677468263,
+          "rank": -0.0142760910032029,
+          "mae_pp": 2.3883751323038065
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.794950244200048,
+          "rank": -0.014329359274074001,
+          "mae_pp": 2.393849723265878
+        }
+      ]
+    }
+  }
+}

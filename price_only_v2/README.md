@@ -5,8 +5,10 @@ companies in [`final_dataset/dataset_summary.csv`](../final_dataset/dataset_summ
 because they match the qualitative preparation branch. This rebuild uses the
 earlier 50 in [`COMPANIES.csv`](../COMPANIES.csv), with only 23 overlapping.
 Its saved models, predictions, and 2021 validation results must not be used
-as baselines for the current 50-company price/news study. The commands below
-reproduce the archived study only. See the [current shared contract](../EXPERIMENT_CONTRACT.md).
+as baselines for the current 50-company price/news study. The code also runs
+for the current 50 when given the explicit company list and output paths in
+the [current run instructions](../results/price_only_current/README.md).
+See the [shared contract](../EXPERIMENT_CONTRACT.md).
 
 ## Data sources and local rebuild
 

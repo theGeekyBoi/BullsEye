@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 
@@ -14,8 +15,13 @@ from price_only_v2.features import read_development, split_mask
 
 
 def main() -> None:
-    root = Path("results/price_only_v2")
-    source = Path("data_local/price_v2_original_50_2017_2023.csv")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data", type=Path, default=Path("data_local/price_v2_original_50_2017_2023.csv"))
+    parser.add_argument("--companies", type=Path, default=Path("COMPANIES.csv"))
+    parser.add_argument("--results-dir", type=Path, default=Path("results/price_only_v2"))
+    args = parser.parse_args()
+    root = args.results_dir
+    source = args.data
     data_hash = sha256(source)
     for name in ("tabular", "lstm"):
         manifest = json.loads((root / name / "run_manifest.json").read_text())
@@ -26,9 +32,9 @@ def main() -> None:
     expected = frame.loc[valid, ["ticker", "prediction_date", "target_excess_return"]].copy()
     expected["prediction_date"] = expected.prediction_date.dt.strftime("%Y-%m-%d")
     expected = expected.set_index(["ticker", "prediction_date"])
-    original = set(pd.read_csv("COMPANIES.csv").ticker)
-    if set(expected.index.get_level_values("ticker")) != original:
-        raise ValueError("Validation universe is not original 50")
+    expected_universe = set(pd.read_csv(args.companies).ticker)
+    if set(expected.index.get_level_values("ticker")) != expected_universe:
+        raise ValueError("Validation universe differs from chosen company list")
     checked = 0
     model_count = 0
     for family in ("tabular", "lstm"):
@@ -55,7 +61,7 @@ def main() -> None:
                     raise ValueError(f"{name}: saved {key} differs from recomputation")
             checked += len(one)
             model_count += 1
-    print(f"Verified {checked:,} 2021 predictions across {model_count} models, exact original-50 keys, labels, metrics, and source hash")
+    print(f"Verified {checked:,} 2021 predictions across {model_count} models, exact chosen-universe keys, labels, metrics, and source hash")
 
 
 if __name__ == "__main__":

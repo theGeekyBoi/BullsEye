@@ -1,0 +1,69 @@
+{
+  "news_table_sha256": "f2996ee7cdb6543ce685ec71629cb70654bdfce140669856caf03a0527cf1d91",
+  "company_count": 50,
+  "exact_price_news_company_day_grid": true,
+  "full_text_coverage_definition": "Source has at least one nonempty full-text Nasdaq record for that ticker-month",
+  "by_year": {
+    "2020": {
+      "rows": 11012,
+      "covered_rows": 6272,
+      "days_with_articles": 7473
+    },
+    "2021": {
+      "rows": 12600,
+      "covered_rows": 7163,
+      "days_with_articles": 7084
+    },
+    "2022": {
+      "rows": 12550,
+      "covered_rows": 7785,
+      "days_with_articles": 7749
+    },
+    "2023": {
+      "rows": 12500,
+      "covered_rows": 8311,
+      "days_with_articles": 8100
+    }
+  },
+  "tickers_with_any_full_text_coverage_2020_2023": 38,
+  "tickers_never_covered_2020_2023": [
+    "BAC",
+    "BRK-B",
+    "CSCO",
+    "HD",
+    "JNJ",
+    "JPM",
+    "MA",
+    "MCD",
+    "META",
+    "NFLX",
+    "PLTR",
+    "RTX"
+  ],
+  "tickers_with_any_full_text_coverage_2021": 29,
+  "tickers_not_covered_in_2021": [
+    "AAPL",
+    "AMZN",
+    "AVGO",
+    "AXP",
+    "BAC",
+    "BRK-B",
+    "CSCO",
+    "HD",
+    "IBM",
+    "JNJ",
+    "JPM",
+    "LIN",
+    "LLY",
+    "MA",
+    "MCD",
+    "META",
+    "MSFT",
+    "NFLX",
+    "PLTR",
+    "RTX",
+    "TSLA"
+  ],
+  "article_days_flagged_uncovered": 1256,
+  "note": "Ticker rows in the news grid are not evidence of usable full-text coverage. Resolve uncovered article days and choose a common eligible comparison mask before training fusion models. No price target values were loaded."
+}

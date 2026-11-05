@@ -1,4 +1,4 @@
-"""Features and chronological development rows for the original 50."""
+"""Features and chronological development rows for a chosen 50-company group."""
 
 from __future__ import annotations
 
@@ -9,7 +9,8 @@ import numpy as np
 import pandas as pd
 
 FIELDS = ("open", "high", "low", "close", "volume")
-SECTORS = tuple(sorted(pd.read_csv(Path(__file__).resolve().parent.parent / "COMPANIES.csv").sector.unique()))
+SECTORS = ("Communication", "Consumer", "Energy", "Financial services",
+           "Health care", "Industrial", "Technology", "Utilities")
 
 
 def read_development(path: Path) -> pd.DataFrame:

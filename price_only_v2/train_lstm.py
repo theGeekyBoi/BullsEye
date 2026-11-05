@@ -93,6 +93,7 @@ def main() -> None:
     parser.add_argument("--data", type=Path, default=Path("data_local/price_v2_original_50_2017_2023.csv"))
     parser.add_argument("--output", type=Path, default=Path("results/price_only_v2/lstm"))
     parser.add_argument("--model-dir", type=Path, default=Path("models/price_only_v2/lstm"))
+    parser.add_argument("--companies", type=Path, default=Path("COMPANIES.csv"))
     parser.add_argument("--max-tuning-epochs", type=int, default=10)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
@@ -132,7 +133,8 @@ def main() -> None:
     pd.DataFrame.from_dict(metrics, orient="index").rename_axis("model_name").to_csv(args.output / "metrics_2021.csv")
     (args.output / "run_manifest.json").write_text(json.dumps({
         "development_data_sha256": sha256(args.data),
-        "company_list_sha256": sha256(Path("COMPANIES.csv")),
+        "company_list_sha256": sha256(args.companies),
+        "company_list_path": str(args.companies),
         "training_years": [2017, 2018, 2019, 2020], "checkpoint_year": 2020,
         "validation_year": 2021, "reserved_test_years": [2022, 2023],
         "runs": runs}, indent=2), encoding="utf-8")

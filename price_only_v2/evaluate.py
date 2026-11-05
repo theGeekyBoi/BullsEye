@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 
@@ -54,9 +55,15 @@ def weekly_portfolio(group: pd.DataFrame, cost_bps_per_side: int) -> dict:
 
 
 def main() -> None:
+    global ROOT
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data", type=Path, default=Path("data_local/price_v2_original_50_2017_2023.csv"))
+    parser.add_argument("--results-dir", type=Path, default=ROOT)
+    args = parser.parse_args()
+    ROOT = args.results_dir
     files = [ROOT / "tabular/predictions_2021.csv", ROOT / "lstm/predictions_2021.csv"]
     frame = pd.concat([pd.read_csv(path, parse_dates=["prediction_date"]) for path in files], ignore_index=True)
-    development = read_development(Path("data_local/price_v2_original_50_2017_2023.csv"))
+    development = read_development(args.data)
     _, valid = split_mask(development, 2017, 2020, 2021)
     labels = development.loc[valid, ["ticker", "prediction_date", "target_excess_return",
                                       "target_company_return", "target_spy_return"]]

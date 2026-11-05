@@ -1,0 +1,64 @@
+{
+  "current_company_count": 50,
+  "current_company_list_sha256": "ce84c36e6af80875a04a9272477e5adacb8eca35215bf4b2ae21ac9c4938012b",
+  "prototype_development_rows": 23612,
+  "rebuilt_development_rows": 25033,
+  "common_2020_2021_keys": 23612,
+  "prototype_only_keys": 0,
+  "rebuilt_only_keys": 1421,
+  "outcome_differences": {
+    "target_company_return": {
+      "max_abs_decimal": 1.090341075107859e-06,
+      "rows_over_0.0001": 0,
+      "rows_over_0.001": 0
+    },
+    "target_spy_return": {
+      "max_abs_decimal": 6.900173253028899e-07,
+      "rows_over_0.0001": 0,
+      "rows_over_0.001": 0
+    },
+    "target_excess_return": {
+      "max_abs_decimal": 1.3795255139024964e-06,
+      "rows_over_0.0001": 0,
+      "rows_over_0.001": 0
+    }
+  },
+  "invalid_daily_source_rows": 0,
+  "reported_split_events_2020_2021": 7,
+  "selected_split_checks": [
+    {
+      "ticker": "AAPL",
+      "date": "2020-08-31",
+      "reported_split_ratio": 4.0,
+      "adjusted_close_to_open_change": 0.022214020624618414,
+      "volume_before": 187630000.0,
+      "volume_after": 225702700.0
+    },
+    {
+      "ticker": "TSLA",
+      "date": "2020-08-31",
+      "reported_split_ratio": 5.0,
+      "adjusted_close_to_open_change": 0.004359860901615775,
+      "volume_before": 301218000.0,
+      "volume_after": 355123200.0
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2021-07-20",
+      "reported_split_ratio": 4.0,
+      "adjusted_close_to_open_change": -0.002649209253930973,
+      "volume_before": 749060000.0,
+      "volume_after": 434687000.0
+    },
+    {
+      "ticker": "GE",
+      "date": "2021-08-02",
+      "reported_split_ratio": 0.125,
+      "adjusted_close_to_open_change": 0.008494269382377961,
+      "volume_before": 12050777.0,
+      "volume_after": 39943542.0
+    }
+  ],
+  "volume_policy": "Yahoo-reported Volume retained unchanged; models with and without volume are compared. Event samples do not fully establish historical volume adjustment semantics.",
+  "reserved_test_outcomes_read": false
+}

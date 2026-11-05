@@ -1,4 +1,4 @@
-"""Build chronological 30-session examples for the original BullsEye universe."""
+"""Build chronological 30-session examples for a chosen BullsEye universe."""
 
 from __future__ import annotations
 
@@ -85,7 +85,7 @@ def build(snapshot: Path, companies: Path, output: Path) -> dict:
                 "earliest_date": str(frame.prediction_date.min().date()),
                 "latest_date": str(frame.prediction_date.max().date()),
                 "skipped_rows_by_ticker": skipped,
-                "price_policy": "Yahoo auto-adjusted OHLC for 49 companies and SPY; EA adjusted FNSPID fallback; unmodified source volume",
+                "price_policy": "Yahoo auto-adjusted OHLC, except EA if present uses adjusted FNSPID fallback; unmodified source volume",
                 "test_policy": "2022-2023 labels are built but never loaded by development training/evaluation"}
     output.with_suffix(".manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     print(f"Built {len(frame):,} examples for {len(expected)} companies: {manifest['earliest_date']} to {manifest['latest_date']}")

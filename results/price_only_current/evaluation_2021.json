@@ -1,0 +1,373 @@
+{
+  "period": "2021 development validation only",
+  "test_years_not_opened": [
+    2022,
+    2023
+  ],
+  "weekly_rule": "Every fifth prediction date, buy up to five positive-forecast companies with rank weights 5/15 to 1/15; unused weight stays cash; close all held shares at the end of their five-session outcome; no shorts or calls.",
+  "models": {
+    "lstm_ohlc_seed123": {
+      "daily_rank_mean": -0.01978877380911879,
+      "daily_rank_95pct_block_interval": [
+        -0.07384387478068151,
+        0.031184466366356696
+      ],
+      "months_positive_rank": 6,
+      "top5_minus_middle10_mean_pp": -0.21450849924238005,
+      "top5_minus_middle10_95pct_block_interval_pp": [
+        -0.614964574703766,
+        0.18911954193056896
+      ],
+      "positive_prediction_share": 0.9483400809716599,
+      "weekly_cost_0bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 0,
+        "model_compounded_return": 0.43965724967716113,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.00799022319722415
+      },
+      "weekly_cost_10bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 10,
+        "model_compounded_return": 0.30338597537774925,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.0059902231972241505
+      },
+      "weekly_cost_20bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 20,
+        "model_compounded_return": 0.17977938284486727,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.00399022319722415
+      }
+    },
+    "lstm_ohlc_seed42": {
+      "daily_rank_mean": -0.017769245349961844,
+      "daily_rank_95pct_block_interval": [
+        -0.07162693196955566,
+        0.033552127308745155
+      ],
+      "months_positive_rank": 6,
+      "top5_minus_middle10_mean_pp": -0.2317909917725413,
+      "top5_minus_middle10_95pct_block_interval_pp": [
+        -0.6283323713600244,
+        0.1666621674018064
+      ],
+      "positive_prediction_share": 0.8290688259109312,
+      "weekly_cost_0bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 0,
+        "model_compounded_return": 0.4765455808127046,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.008502769434851015
+      },
+      "weekly_cost_10bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 10,
+        "model_compounded_return": 0.3368497018157055,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.006502769434851015
+      },
+      "weekly_cost_20bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 20,
+        "model_compounded_return": 0.21013053469947907,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.004502769434851013
+      }
+    },
+    "lstm_ohlcv_seed123": {
+      "daily_rank_mean": -0.014329359274074001,
+      "daily_rank_95pct_block_interval": [
+        -0.06892083553421367,
+        0.038997650597080935
+      ],
+      "months_positive_rank": 6,
+      "top5_minus_middle10_mean_pp": 0.09931104067711614,
+      "top5_minus_middle10_95pct_block_interval_pp": [
+        -0.423512994486424,
+        0.6217666017404332
+      ],
+      "positive_prediction_share": 0.8937651821862348,
+      "weekly_cost_0bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 0,
+        "model_compounded_return": 0.33843638551396515,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039327,
+        "model_mean_weekly_return": 0.006517156519372561
+      },
+      "weekly_cost_10bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 10,
+        "model_compounded_return": 0.21157003029261023,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039327,
+        "model_mean_weekly_return": 0.004517156519372562
+      },
+      "weekly_cost_20bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 20,
+        "model_compounded_return": 0.09651071382654663,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039327,
+        "model_mean_weekly_return": 0.0025171565193725627
+      }
+    },
+    "lstm_ohlcv_seed42": {
+      "daily_rank_mean": 0.01988403458549411,
+      "daily_rank_95pct_block_interval": [
+        -0.03469463011115377,
+        0.07046667087887785
+      ],
+      "months_positive_rank": 7,
+      "top5_minus_middle10_mean_pp": 0.2300658973930888,
+      "top5_minus_middle10_95pct_block_interval_pp": [
+        -0.46225352387673374,
+        0.8540029268601075
+      ],
+      "positive_prediction_share": 0.7930364372469636,
+      "weekly_cost_0bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 0,
+        "model_compounded_return": 0.5557652946033571,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039327,
+        "model_mean_weekly_return": 0.009564508736789282
+      },
+      "weekly_cost_10bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 10,
+        "model_compounded_return": 0.40871897316544725,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039327,
+        "model_mean_weekly_return": 0.007564508736789283
+      },
+      "weekly_cost_20bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 20,
+        "model_compounded_return": 0.2753187169642375,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039327,
+        "model_mean_weekly_return": 0.005564508736789282
+      }
+    },
+    "recent_trend_relative": {
+      "daily_rank_mean": 0.02432515224556994,
+      "daily_rank_95pct_block_interval": [
+        -0.02620536475947817,
+        0.07531951975771788
+      ],
+      "months_positive_rank": 6,
+      "top5_minus_middle10_mean_pp": 0.1534614555897123,
+      "top5_minus_middle10_95pct_block_interval_pp": [
+        -0.37941601742885156,
+        0.6458093941208981
+      ],
+      "positive_prediction_share": 0.4922267206477733,
+      "weekly_cost_0bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 0,
+        "model_compounded_return": 0.20774830133829258,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.004243948951254231
+      },
+      "weekly_cost_10bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 10,
+        "model_compounded_return": 0.0930685388363428,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.00224394895125423
+      },
+      "weekly_cost_20bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 20,
+        "model_compounded_return": -0.010919494898261828,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.00024394895125423138
+      }
+    },
+    "ridge": {
+      "daily_rank_mean": 0.002510024252616023,
+      "daily_rank_95pct_block_interval": [
+        -0.06780421033987366,
+        0.07143814063330246
+      ],
+      "months_positive_rank": 8,
+      "top5_minus_middle10_mean_pp": -0.29480574966918044,
+      "top5_minus_middle10_95pct_block_interval_pp": [
+        -1.0120467234837467,
+        0.3897943164133113
+      ],
+      "positive_prediction_share": 0.7077732793522267,
+      "weekly_cost_0bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 0,
+        "model_compounded_return": 0.27773128943041825,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.005631595755703699
+      },
+      "weekly_cost_10bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 10,
+        "model_compounded_return": 0.15650731577034827,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.0036315957557036993
+      },
+      "weekly_cost_20bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 20,
+        "model_compounded_return": 0.0465756721671724,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.0016315957557036995
+      }
+    },
+    "xgboost_seed123": {
+      "daily_rank_mean": 0.008648003146314793,
+      "daily_rank_95pct_block_interval": [
+        -0.060963484863161554,
+        0.07427584087099252
+      ],
+      "months_positive_rank": 8,
+      "top5_minus_middle10_mean_pp": -0.239454369930004,
+      "top5_minus_middle10_95pct_block_interval_pp": [
+        -1.014242154971624,
+        0.5058522123396928
+      ],
+      "positive_prediction_share": 0.9527935222672065,
+      "weekly_cost_0bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 0,
+        "model_compounded_return": 0.1268631502391535,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.0031618539332899835
+      },
+      "weekly_cost_10bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 10,
+        "model_compounded_return": 0.019690897644480954,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.0011618539332899835
+      },
+      "weekly_cost_20bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 20,
+        "model_compounded_return": -0.0774735065891532,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": -0.0008381460667100158
+      }
+    },
+    "xgboost_seed42": {
+      "daily_rank_mean": 0.010241449334054915,
+      "daily_rank_95pct_block_interval": [
+        -0.055428104913681296,
+        0.07506096918874063
+      ],
+      "months_positive_rank": 7,
+      "top5_minus_middle10_mean_pp": -0.40463373969387384,
+      "top5_minus_middle10_95pct_block_interval_pp": [
+        -1.2061708545075427,
+        0.3687134366563032
+      ],
+      "positive_prediction_share": 0.9548987854251012,
+      "weekly_cost_0bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 0,
+        "model_compounded_return": 0.14017553233761348,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.003448048991762205
+      },
+      "weekly_cost_10bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 10,
+        "model_compounded_return": 0.03175626267151688,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.0014480489917622044
+      },
+      "weekly_cost_20bps": {
+        "weeks": 50,
+        "stock_positions_bought": 250,
+        "cost_bps_per_side": 20,
+        "model_compounded_return": -0.06654051453040655,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": -0.000551951008237795
+      }
+    },
+    "zero": {
+      "daily_rank_mean": null,
+      "daily_rank_95pct_block_interval": null,
+      "months_positive_rank": null,
+      "top5_minus_middle10_mean_pp": null,
+      "top5_minus_middle10_95pct_block_interval_pp": null,
+      "positive_prediction_share": 0.0,
+      "weekly_cost_0bps": {
+        "weeks": 50,
+        "stock_positions_bought": 0,
+        "cost_bps_per_side": 0,
+        "model_compounded_return": 0.0,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.0
+      },
+      "weekly_cost_10bps": {
+        "weeks": 50,
+        "stock_positions_bought": 0,
+        "cost_bps_per_side": 10,
+        "model_compounded_return": 0.0,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.0
+      },
+      "weekly_cost_20bps": {
+        "weeks": 50,
+        "stock_positions_bought": 0,
+        "cost_bps_per_side": 20,
+        "model_compounded_return": 0.0,
+        "spy_compounded_return": 0.2976969056263341,
+        "equal_group_compounded_return": 0.30565292574039304,
+        "model_mean_weekly_return": 0.0
+      }
+    }
+  }
+}

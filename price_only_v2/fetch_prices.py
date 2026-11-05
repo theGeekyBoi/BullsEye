@@ -93,18 +93,19 @@ def fetch(tickers: list[str], start: str, end: str, output: Path, archive: Path)
             records.append(one)
     if failures:
         raise RuntimeError(f"Missing Yahoo data for {failures}; no partial snapshot written")
-    records.append(ea_from_fnspid(archive, start, end))
+    if "EA" in tickers:
+        records.append(ea_from_fnspid(archive, start, end))
     frame = pd.concat(records, ignore_index=True).sort_values(["ticker", "date"])
     if frame.duplicated(["ticker", "date"]).any():
         raise ValueError("Duplicate ticker/date in downloaded snapshot")
     frame.to_csv(output, index=False, float_format="%.12g")
     meta = {
-        "source": "Yahoo Finance via yfinance; EA from FNSPID price archive",
+        "source": "Yahoo Finance via yfinance" + ("; EA from FNSPID price archive" if "EA" in tickers else ""),
         "source_url": "https://finance.yahoo.com/",
         "fnspid_url": "https://huggingface.co/datasets/Zihan1004/FNSPID/resolve/main/Stock_price/full_history.zip",
-        "fnspid_archive_sha256": sha256(archive),
-        "ticker_aliases": {"BK": "BNY"},
-        "ea_adjustment": "FNSPID adjusted-close/close factor; its first downward jump on 2020-07-06 is a source discontinuity, so that factor is carried backward through prior dates. EA dividend events unavailable for separate checking.",
+        "fnspid_archive_sha256": sha256(archive) if "EA" in tickers else None,
+        "ticker_aliases": ({"BK": "BNY"} if "BK" in tickers else {}),
+        "ea_adjustment": ("FNSPID adjusted-close/close factor; its first downward jump on 2020-07-06 is a source discontinuity, so that factor is carried backward through prior dates. EA dividend events unavailable for separate checking." if "EA" in tickers else None),
         "retrieved_utc": datetime.now(timezone.utc).isoformat(),
         "yfinance_version": yf.__version__, "start_inclusive": start,
         "end_exclusive": end, "auto_adjust": True, "repair": False,
