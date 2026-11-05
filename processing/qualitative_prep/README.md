@@ -53,9 +53,9 @@ META  -> FB
 
 ### 2. `audit_nasdaq_coverage.py`
 
-Counts source-tagged Nasdaq records and full-text records for each ticker and year from 2020 through 2023.
+Counts source-tagged Nasdaq records and full-text records for each ticker and month from 2020 through 2023.
 
-This tells us whether a ticker-year has usable source coverage before we interpret missing articles as no news.
+This tells us whether a ticker-month has usable source coverage before we interpret missing articles as no news.
 
 ### 3. `prepare_nasdaq_article_links.py`
 
@@ -92,6 +92,6 @@ Intermediate audit outputs are generated in `data/qualitative_dataset/` too, but
 
 The company-day table keeps rows for all quantitative prediction dates.
 
-For 2020-2023 rows, `source_coverage_available = True`. A row with no accepted articles in the five-session window has `news_count = 0` and `no_eligible_news = True`.
+For rows whose ticker-month has full-text Nasdaq coverage, `source_coverage_available = True`. A row with no accepted articles in the five-session window has `news_count = 0` and `no_eligible_news = True`.
 
-For 2024-2026 rows, `source_coverage_available = False`. These rows are kept in the join table but should be excluded from the main multimodal comparison.
+Rows outside covered ticker-months, including 2024-2026 rows, have `source_coverage_available = False`. These rows are kept in the join table but should be excluded from the main multimodal comparison.
