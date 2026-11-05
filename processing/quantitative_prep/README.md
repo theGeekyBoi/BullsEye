@@ -1,9 +1,9 @@
 > **Company-list status (November 5, 2026):** These scripts produced the
 > 2020–2026 price dataset for the **current** 50 companies in
-> [`final_dataset/dataset_summary.csv`](../final_dataset/dataset_summary.csv).
+> [`final_dataset/dataset_summary.csv`](../../final_dataset/dataset_summary.csv).
 > The qualitative preparation branch uses the same ticker list. The separate
-> [`price_only_v2/`](../price_only_v2/README.md) rebuild uses an earlier,
-> different list and is archived. See the [shared contract](../EXPERIMENT_CONTRACT.md).
+> [`price_only_v2/`](../../price_only_v2/README.md) rebuild uses an earlier,
+> different list and is archived. See the [shared contract](../../EXPERIMENT_CONTRACT.md).
 
 Script 01 — 01_inventory_sources.py
 Purpose: Inventory the available raw data sources.

@@ -14,12 +14,19 @@ META, NFLX, PLTR, and RTX. Another 1,256 company-days have accepted article
 IDs while `source_coverage_available` is false, mostly in 2020. The detailed
 counts are in
 [`news_coverage_by_ticker_year.csv`](../results/price_only_current/news_coverage_by_ticker_year.csv).
+The integrated article-link check found accepted story-to-company links for
+48 of the 50 tickers across 2020–2023. **PLTR and RTX have no accepted links**
+in this FNSPID extract. Counts by ticker and year are in
+[`accepted_news_links_by_ticker_year.csv`](../results/price_only_current/accepted_news_links_by_ticker_year.csv).
+All 685,468 company-day article references point to accepted links.
 
 ## Tasks for the qualitative team
 
 1. **Check the raw source for the uncovered tickers.** Inspect the monthly
    coverage counts and source ticker aliases, including `BRK-B`/`BRK.B`,
-   `META`/`FB`, and `RTX`/older symbols. For each missing ticker-year, record
+   `META`/`FB`, and `RTX`/older symbols. Start with PLTR and RTX, which have
+   no accepted links, then the 10 other tickers with links but no flagged
+   full-text coverage. For each missing ticker-year, record
    whether source articles are genuinely absent or the mapping/filtering
    missed them. Do not infer coverage from a row in the company-day grid.
 2. **Explain the 1,256 inconsistent rows.** Sample article IDs on days with

@@ -72,5 +72,5 @@ both to *fit* a fusion model and to *validate* that same fusion model; a later
 fusion training plan needs separate earlier-to-later predictions.
 
 The repository currently lacks the raw Yahoo price and calendar files expected
-by `Quantitative Data Prep/05_build_30day_dataset.py`, so this run uses the
+by `processing/quantitative_prep/05_build_30day_dataset.py`, so this run uses the
 committed quantitative CSV and does not claim to regenerate that source file.

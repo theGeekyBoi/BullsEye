@@ -2,7 +2,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 
 PRICE_FILE = ROOT / "prototype_yfinance" / "daily_prices.csv"
 CALENDAR_FILE = ROOT / "trading_calendar.csv"

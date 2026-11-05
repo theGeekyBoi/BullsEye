@@ -2,7 +2,7 @@
 from pathlib import Path
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 PRICE_FILE = ROOT / "prototype_yfinance" / "daily_prices.csv"
 OUTPUT_DIR = ROOT / "processed_fnspid"
 

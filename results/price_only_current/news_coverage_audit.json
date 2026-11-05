@@ -65,5 +65,17 @@
     "TSLA"
   ],
   "article_days_flagged_uncovered": 1256,
-  "note": "Ticker rows in the news grid are not evidence of usable full-text coverage. Resolve uncovered article days and choose a common eligible comparison mask before training fusion models. No price target values were loaded."
+  "note": "Ticker rows in the news grid are not evidence of usable full-text coverage. Resolve uncovered article days and choose a common eligible comparison mask before training fusion models. No price target values were loaded.",
+  "article_link_check": {
+    "links_sha256": "6dd1b049aeec88113dfc439d2df93b07c5a04f880dc590240e132160f99d8593",
+    "accepted_article_company_pairs": 139756,
+    "referenced_article_company_occurrences": 685468,
+    "all_references_accepted": true,
+    "tickers_with_any_accepted_link_2020_2023": 48,
+    "tickers_without_accepted_links": [
+      "PLTR",
+      "RTX"
+    ],
+    "tickers_with_any_accepted_link_2021": 29
+  }
 }

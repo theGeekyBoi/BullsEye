@@ -2,7 +2,7 @@
 from pathlib import Path
 import csv
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 
 FNSPID_DIR = ROOT / "raw_fnspid" / "prices" / "full_history"
 

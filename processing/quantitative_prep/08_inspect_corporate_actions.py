@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 
 ACTION_FILE = ROOT / "prototype_yfinance" / "corporate_actions.csv"
 

@@ -4,18 +4,22 @@ BullsEye is an advanced machine learning course project that compares price hist
 
 ## Start here
 
+- [Team setup and integration checks](INTEGRATION_GUIDE.md)
 - [Original one-page rule sheet (archived)](PROJECT_RULES.pdf) and [current text rules](PROJECT_RULES.md)
 - [Initial FNSPID data audit](DATA_AUDIT.md)
 - [Current 50-company list and date counts](final_dataset/dataset_summary.csv)
 - [Shared price, news, and prediction contract](EXPERIMENT_CONTRACT.md)
 - [Current news-coverage follow-up for the team](To%20Do/02_CURRENT_NEWS_COVERAGE.md)
+- [Detailed news-data and qualitative-model workplan](To%20Do/03_QUALITATIVE_GAP_AND_MODEL_PLAN.md)
 - [Earlier proposed 50-company list (archived)](COMPANIES.csv)
 
 The current company group is the one used in the qualitative preparation branch. The initial FNSPID audit examined a different group and remains background material. News timing and relevance checks must be completed before combined-model training.
 
 ## Current development work
 
-- [Quantitative data preparation scripts](Quantitative%20Data%20Prep/readme.md) and [30-session dataset](final_dataset/dataset_summary.csv)
+- [Quantitative data preparation scripts](processing/quantitative_prep/README.md) and [30-session dataset](final_dataset/dataset_summary.csv)
+- [Qualitative data preparation scripts and outputs](processing/qualitative_prep/README.md)
+- [Prepared news tables](data/qualitative_dataset) (Git LFS)
 - [Price-only training instructions](price_only/README.md)
 - [First 2021 validation results and predictions](results/price_only/dev_2020_2021_seed42/README.md)
 - [Current 50-company price rebuild and 2021 results](results/price_only_current/README.md)
@@ -44,6 +48,10 @@ experiment for the earlier 50 and must not be mixed with current news results.
 
 ## Data
 
-The original proposal centered on [FNSPID](https://huggingface.co/datasets/Zihan1004/FNSPID), including its `Stock_price/full_history.zip`, `Stock_news/nasdaq_exteral_data.csv`, and `Stock_news/All_external.csv` files. The current quantitative prototype instead uses Yahoo Finance prices, as documented in the preparation scripts. [Financial PhraseBank](https://huggingface.co/datasets/takala/financial_phrasebank) is optional for a news-tone component. [FinBERT pretrain](https://huggingface.co/yiyanghkust/finbert-pretrain) is the starting text model.
+The original proposal centered on [FNSPID](https://huggingface.co/datasets/Zihan1004/FNSPID), including its `Stock_price/full_history.zip`, `Stock_news/nasdaq_exteral_data.csv`, and `Stock_news/All_external.csv` files. The current quantitative prototype instead uses Yahoo Finance prices, as documented in the preparation scripts. [Financial PhraseBank](https://huggingface.co/datasets/takala/financial_phrasebank) can be used for a separately evaluated sentiment component. [ProsusAI FinBERT](https://huggingface.co/ProsusAI/finbert) already has a sentiment-classification head; [FinBERT pretrain](https://huggingface.co/yiyanghkust/finbert-pretrain) is a language-model checkpoint that would need task-specific training before producing sentiment labels.
 
-Large datasets, downloaded news text, trained weights, and private configuration files should stay outside this public repository. The small raw-data audit sample is kept separately from the repository while redistribution rights are checked.
+Raw downloads, trained weights, and private configuration files stay outside
+this repository. The qualitative branch placed prepared FNSPID article tables
+in Git LFS; see the [FNSPID dataset card](https://huggingface.co/datasets/Zihan1004/FNSPID)
+for its attribution and noncommercial terms. Check source-level reuse rights
+before sharing any additional article text or publishing the final dashboard.
