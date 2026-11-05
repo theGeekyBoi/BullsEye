@@ -332,8 +332,8 @@
       "maximum_input_error": 0.0,
       "maximum_target_error": 2.0020096691553135e-13,
       "company_return": -0.1440749911557998,
-      "spy_return": 0.0034332500451852432,
-      "excess_return": -0.14750824120098505
+      "spy_return": 0.0034331759950365637,
+      "excess_return": -0.14750816715083637
     },
     {
       "ticker": "CMCSA",
@@ -344,10 +344,10 @@
       "dividend_events_in_outcome": [],
       "inputs_checked": 300,
       "maximum_input_error": 0.0,
-      "maximum_target_error": 4.774652895278564e-14,
-      "company_return": -0.002106969442607687,
-      "spy_return": 0.011925502736640059,
-      "excess_return": -0.014032472179247746
+      "maximum_target_error": 2.9863264638940734e-14,
+      "company_return": -0.002106687124846074,
+      "spy_return": 0.011925882898670137,
+      "excess_return": -0.014032570023516211
     },
     {
       "ticker": "TJX",
@@ -358,10 +358,10 @@
       "dividend_events_in_outcome": [],
       "inputs_checked": 300,
       "maximum_input_error": 0.0,
-      "maximum_target_error": 4.717580492918927e-14,
-      "company_return": -0.010965110257052824,
-      "spy_return": -0.0027440067897224196,
-      "excess_return": -0.008221103467330404
+      "maximum_target_error": 1.619017420129154e-14,
+      "company_return": -0.01096534086538381,
+      "spy_return": -0.002744131477112166,
+      "excess_return": -0.008221209388271644
     },
     {
       "ticker": "NEE",
@@ -372,10 +372,10 @@
       "dividend_events_in_outcome": [],
       "inputs_checked": 300,
       "maximum_input_error": 0.0,
-      "maximum_target_error": 1.3204715099135456e-14,
-      "company_return": -0.028013749611802474,
-      "spy_return": -0.04556743483608927,
-      "excess_return": 0.017553685224286797
+      "maximum_target_error": 4.5460163411448207e-14,
+      "company_return": -0.028013930700145462,
+      "spy_return": -0.04556791839806251,
+      "excess_return": 0.01755398769791705
     },
     {
       "ticker": "GE",
@@ -386,10 +386,10 @@
       "dividend_events_in_outcome": [],
       "inputs_checked": 300,
       "maximum_input_error": 0.0,
-      "maximum_target_error": 2.932376563791195e-14,
-      "company_return": -0.021466749224629322,
-      "spy_return": 0.008791483636597652,
-      "excess_return": -0.030258232861226975
+      "maximum_target_error": 4.534914110898569e-14,
+      "company_return": -0.021466630244843743,
+      "spy_return": 0.008792082729501605,
+      "excess_return": -0.030258712974345348
     },
     {
       "ticker": "MRK",
@@ -405,10 +405,10 @@
       ],
       "inputs_checked": 300,
       "maximum_input_error": 0.0,
-      "maximum_target_error": 1.1986939218999737e-14,
-      "company_return": 0.04124953744709381,
-      "spy_return": 0.012824028836505796,
-      "excess_return": 0.028425508610588013
+      "maximum_target_error": 1.0123846205800646e-14,
+      "company_return": 0.04124960416861012,
+      "spy_return": 0.01282385924070395,
+      "excess_return": 0.02842574492790617
     },
     {
       "ticker": "EA",
@@ -421,8 +421,8 @@
       "maximum_input_error": 0.0,
       "maximum_target_error": 3.304995166431013e-14,
       "company_return": 0.01722625861136695,
-      "spy_return": 0.0004457123910663885,
-      "excess_return": 0.016780546220300563
+      "spy_return": 0.00044560594579956536,
+      "excess_return": 0.016780652665567386
     },
     {
       "ticker": "EA",
@@ -433,10 +433,10 @@
       "dividend_events_in_outcome": [],
       "inputs_checked": 300,
       "maximum_input_error": 0.0,
-      "maximum_target_error": 2.2142010447367966e-14,
+      "maximum_target_error": 2.1347507095370588e-14,
       "company_return": 0.021452727677779837,
-      "spy_return": 0.01990298500772214,
-      "excess_return": 0.0015497426700576966
+      "spy_return": 0.019903067432278654,
+      "excess_return": 0.0015496602455011832
     }
   ],
   "split_cases": [
@@ -444,7 +444,7 @@
       "ticker": "CMCSA",
       "date": "2017-02-21",
       "reported_split_ratio": 2.0,
-      "adjusted_close_change_pct": 0.6107254170711673,
+      "adjusted_close_change_pct": 0.6107538812494928,
       "yahoo_volume_before": 20912987.0,
       "yahoo_volume_after": 14464572.0,
       "fnspid_volume_before": 19599800.0,
@@ -454,7 +454,7 @@
       "ticker": "TJX",
       "date": "2018-11-07",
       "reported_split_ratio": 2.0,
-      "adjusted_close_change_pct": 1.1775369060660568,
+      "adjusted_close_change_pct": 1.1775368147748821,
       "yahoo_volume_before": 5561600.0,
       "yahoo_volume_after": 5858400.0,
       "fnspid_volume_before": 5561600.0,
@@ -464,7 +464,7 @@
       "ticker": "NEE",
       "date": "2020-10-27",
       "reported_split_ratio": 4.0,
-      "adjusted_close_change_pct": 0.15531652963496345,
+      "adjusted_close_change_pct": 0.15531654790599259,
       "yahoo_volume_before": 5707600.0,
       "yahoo_volume_after": 4834200.0,
       "fnspid_volume_before": 5707600.0,
@@ -474,13 +474,67 @@
       "ticker": "GE",
       "date": "2021-08-02",
       "reported_split_ratio": 0.125,
-      "adjusted_close_change_pct": -2.8957701585647477,
+      "adjusted_close_change_pct": -2.8957582091663103,
       "yahoo_volume_before": 12050777.0,
       "yahoo_volume_after": 39943542.0,
       "fnspid_volume_before": 9617540.0,
       "yahoo_to_fnspid_volume_before": 1.2529999355344505
     }
   ],
-  "ea_caveat": "EA uses FNSPID archived adjusted-close factors because Yahoo no longer serves delisted EA. Its factor had a false downward step on 2020-07-06; the post-step factor was carried backward. Dividend event amounts are unavailable for independent verification.",
+  "ea_dividend_adjustment_steps": [
+    {
+      "date": "2020-12-01",
+      "approximate_cash_from_adjustment": 0.16952979581917577
+    },
+    {
+      "date": "2021-03-02",
+      "approximate_cash_from_adjustment": 0.16963332736368952
+    },
+    {
+      "date": "2021-06-01",
+      "approximate_cash_from_adjustment": 0.1710155423945407
+    },
+    {
+      "date": "2021-08-31",
+      "approximate_cash_from_adjustment": 0.17248843467934416
+    },
+    {
+      "date": "2021-12-07",
+      "approximate_cash_from_adjustment": 0.17002256956288303
+    },
+    {
+      "date": "2022-03-08",
+      "approximate_cash_from_adjustment": 0.16538886149503906
+    },
+    {
+      "date": "2022-06-07",
+      "approximate_cash_from_adjustment": 0.19108719274269456
+    },
+    {
+      "date": "2022-08-30",
+      "approximate_cash_from_adjustment": 0.18567534994704377
+    },
+    {
+      "date": "2022-11-29",
+      "approximate_cash_from_adjustment": 0.1891576230647449
+    },
+    {
+      "date": "2023-02-28",
+      "approximate_cash_from_adjustment": 0.19005836484208694
+    },
+    {
+      "date": "2023-05-30",
+      "approximate_cash_from_adjustment": 0.1897963731296448
+    },
+    {
+      "date": "2023-08-29",
+      "approximate_cash_from_adjustment": 0.1909927461097017
+    },
+    {
+      "date": "2023-11-28",
+      "approximate_cash_from_adjustment": 0.18923928483721358
+    }
+  ],
+  "ea_caveat": "EA uses FNSPID archived adjusted-close factors because Yahoo no longer serves delisted EA. Its factor had a false downward step on 2020-07-06; the post-step factor was carried backward. Thirteen later upward steps imply approximately 17-19 cent dividends, consistent with company announcements, but a complete independent daily price source is unavailable.",
   "volume_conclusion": "Yahoo auto_adjust changes OHLC but does not apply another multiplier to Volume. Ordinary split dates show no split-sized price discontinuity and TJX/NEE volumes match the 2023 FNSPID snapshot. This supports using reported Volume without another adjustment, but unusual spin-offs are not independently resolved. Keep volume as an ablation, not a required primary input."
 }

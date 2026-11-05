@@ -1,5 +1,13 @@
 # BullsEye: Initial Dataset Preparation Handoff
 
+> **Archived handoff.** This was written for the earlier 50-company proposal
+> in `COMPANIES.csv` and its 2017–2023 plan. The current project uses the 50
+> tickers in [`final_dataset/dataset_summary.csv`](https://github.com/theGeekyBoi/BullsEye/blob/main/final_dataset/dataset_summary.csv),
+> matching the qualitative preparation branch. Use the
+> [current experiment contract](https://github.com/theGeekyBoi/BullsEye/blob/main/EXPERIMENT_CONTRACT.md)
+> for company keys and dates. Do not follow this handoff's old company-list or
+> split instructions.
+
 ## What we are making
 
 We need a dataset with **one example per company per trading day**. For each example, we will save what BullsEye could have known at the close of that day: the company, its recent prices and volume, and relevant news available by then. We will also calculate the result the model will later learn to predict.

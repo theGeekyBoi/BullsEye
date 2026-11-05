@@ -56,7 +56,7 @@ def ea_from_fnspid(archive: Path, start: str, end: str) -> pd.DataFrame:
     table = table.loc[table["date"].between(start, end, inclusive="left")]
     result = table[["date", "open", "high", "low", "close", "volume"]].copy()
     result.columns = ["date", "Open", "High", "Low", "Close", "Volume"]
-    result["Dividends"] = 0.0  # event amounts are unavailable in this archive
+    result["Dividends"] = np.nan  # event amounts are unavailable in this archive
     result["Stock Splits"] = 0.0
     result["date"] = result["date"].dt.strftime("%Y-%m-%d")
     result.insert(0, "ticker", "EA")

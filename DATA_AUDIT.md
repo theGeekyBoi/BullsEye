@@ -1,5 +1,10 @@
 # Initial FNSPID Data Audit
 
+> **Historical audit.** This checks the earlier 50 companies in
+> `COMPANIES.csv`. The current experiment uses the 50 tickers in
+> [`final_dataset/dataset_summary.csv`](final_dataset/dataset_summary.csv).
+> Its news coverage must be assessed using the qualitative preparation branch.
+
 **Date:** October 13, 2026  
 **Status:** Raw input coverage confirmed for the proposed study group; cleaning and detailed relevance checks remain.
 

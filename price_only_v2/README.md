@@ -1,10 +1,12 @@
 # Price-only rebuild for the original 50 companies
 
-This is the canonical price-only development branch for the 50 companies in
-[`COMPANIES.csv`](../COMPANIES.csv). It corrects the company-list mismatch in the
-2020–2026 quantitative prototype. That prototype remains in `final_dataset/`
-for comparison; **do not join it to the original group's news data**. Only 23
-companies overlap.
+**Archived experiment (November 5, 2026).** The project now uses the 50
+companies in [`final_dataset/dataset_summary.csv`](../final_dataset/dataset_summary.csv)
+because they match the qualitative preparation branch. This rebuild uses the
+earlier 50 in [`COMPANIES.csv`](../COMPANIES.csv), with only 23 overlapping.
+Its saved models, predictions, and 2021 validation results must not be used
+as baselines for the current 50-company price/news study. The commands below
+reproduce the archived study only. See the [current shared contract](../EXPERIMENT_CONTRACT.md).
 
 ## Data sources and local rebuild
 
@@ -28,7 +30,7 @@ python -m price_only_v2.verify_inference
 ```
 
 The exact snapshot used for the reported run has SHA-256
-`8142f180473eb7ca0503bfd25d1d6fc8461671c9abc48ab344982218f0c13e67`.
+`c82f7fb41be0ec737083e2f927dd5d5bcc8a6bc0182c51f5ab24a454c6c21a02`.
 Yahoo may revise adjusted historical values on a later download, so a fresh
 snapshot can have a different hash and slightly different results. The derived
 dataset hash, training settings, dates, and seeds are saved in run manifests.
@@ -55,8 +57,11 @@ There were no invalid source OHLCV rows and one missing EA trading day.
 **EA limitation:** FNSPID's EA adjusted-close ratio had a false 1.8% downward
 step on 2020-07-06, without a split or dividend. The fetcher carries the
 post-step adjustment factor backward to earlier dates. This removes the false
-price movement; its dividend cash amounts are not independently available.
-That one-company fallback remains a data-quality caveat before final testing.
+price movement. Thirteen later factor changes imply quarterly cash dividends
+near $0.17–$0.19, consistent with [EA's 2021](https://ir.ea.com/press-releases/press-release-details/2021/Electronic-Arts-Reports-Q4-and-FY21-Financial-Results/default.aspx)
+and [2023](https://ir.ea.com/press-releases/press-release-details/2023/Electronic-Arts-Reports-Strong-Q2-FY24-Results/default.aspx)
+announcements. A complete independent EA daily price series is still unavailable,
+so the one-company fallback remains a data-quality caveat before final testing.
 
 **Volume decision:** Keep reported Yahoo volume unchanged and compare models
 with and without it. Ordinary split examples showed no split-sized adjusted

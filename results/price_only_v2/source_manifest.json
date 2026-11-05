@@ -7,7 +7,7 @@
     "BK": "BNY"
   },
   "ea_adjustment": "FNSPID adjusted-close/close factor; its first downward jump on 2020-07-06 is a source discontinuity, so that factor is carried backward through prior dates. EA dividend events unavailable for separate checking.",
-  "retrieved_utc": "2026-11-05T20:09:22.225327+00:00",
+  "retrieved_utc": "2026-11-05T20:26:51.565299+00:00",
   "yfinance_version": "1.8.0",
   "start_inclusive": "2016-11-01",
   "end_exclusive": "2024-01-10",
@@ -68,5 +68,5 @@
     "SPY"
   ],
   "rows": 92201,
-  "sha256": "8142f180473eb7ca0503bfd25d1d6fc8461671c9abc48ab344982218f0c13e67"
+  "sha256": "c82f7fb41be0ec737083e2f927dd5d5bcc8a6bc0182c51f5ab24a454c6c21a02"
 }

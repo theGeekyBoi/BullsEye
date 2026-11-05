@@ -4,31 +4,32 @@ BullsEye is an advanced machine learning course project that compares price hist
 
 ## Start here
 
-- [Original one-page rule sheet](PROJECT_RULES.pdf) and [current text version with implementation note](PROJECT_RULES.md)
+- [Original one-page rule sheet (archived)](PROJECT_RULES.pdf) and [current text rules](PROJECT_RULES.md)
 - [Initial FNSPID data audit](DATA_AUDIT.md)
-- [Proposed 50-company study group and raw coverage counts](COMPANIES.csv)
+- [Current 50-company list and date counts](final_dataset/dataset_summary.csv)
+- [Shared price, news, and prediction contract](EXPERIMENT_CONTRACT.md)
+- [Earlier proposed 50-company list (archived)](COMPANIES.csv)
 
-The rules and company group were drafted before any model was trained. The data audit establishes that the required raw fields are available for this group. It also identifies news-timing and relevance checks that must be completed before training.
+The current company group is the one used in the qualitative preparation branch. The initial FNSPID audit examined a different group and remains background material. News timing and relevance checks must be completed before combined-model training.
 
 ## Current development work
 
 - [Quantitative data preparation scripts](Quantitative%20Data%20Prep/readme.md) and [30-session dataset](final_dataset/dataset_summary.csv)
 - [Price-only training instructions](price_only/README.md)
 - [First 2021 validation results and predictions](results/price_only/dev_2020_2021_seed42/README.md)
-- [Rebuilt price-only pipeline for the agreed 50 companies](price_only_v2/README.md)
-- [Rebuilt data audit and 2021 validation report](results/price_only_v2/README.md)
+- [Earlier 50-company price rebuild (archived)](price_only_v2/README.md)
+- [Earlier rebuild audit and 2021 validation report (archived)](results/price_only_v2/README.md)
 
-The current quantitative prototype was built from Yahoo Finance price data and
-covers a different 50-company group from the original FNSPID audit. Its
-2020–2026 period must be reconciled with available news and the project rules
-before the final multimodal comparison. The first price-only run uses 2020 for
+The current quantitative prototype was built from Yahoo Finance prices. Its
+50 tickers match the qualitative branch's quantitative grid. News coverage is
+currently prepared for 2020–2023, so 2024–2026 price dates are outside the
+main combined-model comparison. The first price-only run uses 2020 for
 training and 2021 for validation; it makes no final-test performance claim.
 
-The rebuild uses the original 50-company list, adds earlier 2017–2019 history
-and a matching SPY window, and checks 2021 only after rolling earlier-year
-model selection. Its raw and derived price snapshots are local files. **Use
-the rebuilt company/date keys for the future news join.** The newer 50-company
-prototype remains for historical comparison and is not the canonical group.
+The separate `price_only_v2/` rebuild used the earlier 50 in `COMPANIES.csv`
+and added 2017–2019 history and SPY inputs. It remains an archived experiment.
+**Its saved predictions and validation scores are not current-universe
+baselines.** Rerun those methods on the current 50 before comparing with news.
 
 ## Planned build order
 

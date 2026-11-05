@@ -96,6 +96,15 @@ def audit(snapshot: Path, built: Path, original: Path, archive: Path, output: Pa
     # Inspect conventional splits without using 2022-23 test outcomes.
     split_cases = []
     with zipfile.ZipFile(archive) as bundle:
+        ea_raw = pd.read_csv(io.BytesIO(bundle.read("full_history/EA.csv"))).sort_values("date")
+        ea_raw = ea_raw.loc[ea_raw.date.between("2017-01-01", "2023-12-31")].copy()
+        ea_ratio = ea_raw["adj close"]/ea_raw.close
+        jumps = ea_ratio.diff()
+        ea_dividend_steps = []
+        for row, change, old_factor in zip(ea_raw.loc[jumps > 1e-4].itertuples(),
+                                           jumps[jumps > 1e-4], ea_ratio.shift(1)[jumps > 1e-4]):
+            ea_dividend_steps.append({"date": row.date,
+                                      "approximate_cash_from_adjustment": float(change/old_factor*row.close)})
         for ticker, day in (("CMCSA", "2017-02-21"), ("TJX", "2018-11-07"),
                             ("NEE", "2020-10-27"), ("GE", "2021-08-02")):
             one = source[source.ticker == ticker].sort_values("date")
@@ -114,7 +123,8 @@ def audit(snapshot: Path, built: Path, original: Path, archive: Path, output: Pa
               "prototype_only": sorted(current_tickers-original_tickers),
               "source_invalid_ohlcv_rows": int(invalid.sum()), "coverage": coverage,
               "sample_checks": checks, "split_cases": split_cases,
-              "ea_caveat": "EA uses FNSPID archived adjusted-close factors because Yahoo no longer serves delisted EA. Its factor had a false downward step on 2020-07-06; the post-step factor was carried backward. Dividend event amounts are unavailable for independent verification.",
+              "ea_dividend_adjustment_steps": ea_dividend_steps,
+              "ea_caveat": "EA uses FNSPID archived adjusted-close factors because Yahoo no longer serves delisted EA. Its factor had a false downward step on 2020-07-06; the post-step factor was carried backward. Thirteen later upward steps imply approximately 17-19 cent dividends, consistent with company announcements, but a complete independent daily price source is unavailable.",
               "volume_conclusion": "Yahoo auto_adjust changes OHLC but does not apply another multiplier to Volume. Ordinary split dates show no split-sized price discontinuity and TJX/NEE volumes match the 2023 FNSPID snapshot. This supports using reported Volume without another adjustment, but unusual spin-offs are not independently resolved. Keep volume as an ablation, not a required primary input."}
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(report, indent=2), encoding="utf-8")

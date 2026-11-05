@@ -1,5 +1,11 @@
 # Price-only rebuild: development results
 
+**Archived experiment.** These results use the earlier `COMPANIES.csv` group.
+The current project uses the different 50 tickers in
+[`final_dataset/dataset_summary.csv`](../../final_dataset/dataset_summary.csv).
+Do not compare the scores below directly with current news or fusion models.
+See the [shared experiment contract](../../EXPERIMENT_CONTRACT.md).
+
 **Study group:** the original 50 in `COMPANIES.csv` (23 overlap the newer
 quantitative prototype). **Training:** 2017–2020. **Model settings chosen on:**
 2018–2020 rolling checks. **Reported validation:** 2021, 12,350 company-day
@@ -14,8 +20,8 @@ examples on 247 dates. **Reserved final test:** 2022–2023, not scored here.
 | XGBoost, seed 123 | 0.010 | 2.558 | 51.4% |
 | LSTM without volume, seed 42 | −0.001 | 2.558 | 51.7% |
 | LSTM without volume, seed 123 | ~0.000 | **2.556** | 52.3% |
-| LSTM with volume, seed 42 | −0.015 | 2.568 | 50.3% |
-| LSTM with volume, seed 123 | −0.023 | 2.566 | 49.3% |
+| LSTM with volume, seed 42 | −0.017 | 2.566 | 50.7% |
+| LSTM with volume, seed 123 | −0.021 | 2.566 | 48.6% |
 
 *A zero forecast is counted as “nonpositive,” so its direction score is merely
 the share of nonpositive outcomes, not evidence of predictive ability.
