@@ -1,3 +1,9 @@
+> **Company-list status (November 2026):** These scripts produced a 2020–2026
+> prototype with a different 50-company set from `COMPANIES.csv` (23 overlap).
+> For the agreed 2017–2023 study group and price-only development run, use
+> [`price_only_v2/README.md`](../price_only_v2/README.md). Keep this prototype
+> separate from the original-group news data.
+
 Script 01 — 01_inventory_sources.py
 Purpose: Inventory the available raw data sources.
 

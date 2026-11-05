@@ -1,0 +1,10 @@
+{
+  "rows": 83862,
+  "companies": 50,
+  "overlap_original_50": 23,
+  "duplicate_keys": 0,
+  "window_pairs_checked": 12152740,
+  "window_mismatches": 0,
+  "forward_company_targets_checked": 83612,
+  "forward_company_target_mismatches": 0
+}

@@ -12,9 +12,11 @@ Each example uses the company's identity and business area, approximately **30 c
 
 ## Companies, data, and dates
 
-The study will use the **50 companies in COMPANIES.csv**, chosen after the initial FNSPID coverage audit. FNSPID supplies historical prices and news. Financial PhraseBank may be used for a separate news-tone component. We will check missing dates, symbol changes, duplicate stories, and corporate actions. Stock and SPY opening and closing prices will receive consistent split and dividend treatment before returns are calculated. If the required adjustment cannot be verified, the team will revise the target rule before testing.
+The study will use the **50 companies in COMPANIES.csv**, chosen after the initial FNSPID coverage audit. FNSPID supplies historical news and the archived EA price fallback; the current rebuild obtains adjusted historical prices for the other companies and SPY from Yahoo Finance. Financial PhraseBank may be used for a separate news-tone component. We will check missing dates, symbol changes, duplicate stories, and corporate actions. Stock and SPY opening and closing prices will receive consistent split and dividend treatment before returns are calculated. If the required adjustment cannot be verified, the team will revise the target rule before testing.
 
 The planned chronological split is **2017–2020 for training**, **2021 for validation and model choices**, and **2022–2023 for the untouched final test**, subject to the initial coverage check. A gap of at least five trading sessions at each boundary prevents an outcome from crossing into the next period. The company list and date boundaries will be fixed before final testing.
+
+**Implementation note, November 2026:** The separate 2020–2026 Yahoo prototype in `final_dataset/` contains a different set of 50 companies; only 23 overlap this rule sheet's `COMPANIES.csv`. The original 50 remain the agreed final study group. The new `price_only_v2/` builder uses them and adds 2017–2019 price history. The prototype must not be joined directly to the original-group news table. EA uses an archived fallback after its public ticker ceased trading; its adjusted-price discontinuity is corrected and documented in the audit. This fallback, the volume basis around unusual corporate actions, and the final news coverage still require review before the final test is opened.
 
 ## Models and comparisons
 

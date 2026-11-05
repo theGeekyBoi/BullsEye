@@ -1,0 +1,486 @@
+{
+  "original_company_count": 50,
+  "current_company_count": 50,
+  "overlap_count": 23,
+  "original_only": [
+    "AMAT",
+    "BA",
+    "BK",
+    "CI",
+    "CMCSA",
+    "CME",
+    "COP",
+    "D",
+    "DE",
+    "DHR",
+    "DUK",
+    "EA",
+    "EOG",
+    "FDX",
+    "GILD",
+    "GOOG",
+    "HAL",
+    "INTC",
+    "MS",
+    "NEE",
+    "NKE",
+    "OXY",
+    "T",
+    "TJX",
+    "UPS",
+    "USB",
+    "VLO"
+  ],
+  "prototype_only": [
+    "AAPL",
+    "ACN",
+    "AMZN",
+    "AVGO",
+    "AXP",
+    "BAC",
+    "BRK-B",
+    "CSCO",
+    "GOOGL",
+    "HD",
+    "IBM",
+    "JNJ",
+    "JPM",
+    "LIN",
+    "LLY",
+    "MA",
+    "MCD",
+    "META",
+    "MSFT",
+    "NFLX",
+    "NOW",
+    "NVDA",
+    "PLTR",
+    "RTX",
+    "TMO",
+    "TSLA",
+    "TXN"
+  ],
+  "source_invalid_ohlcv_rows": 0,
+  "coverage": {
+    "ABBV": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "ABT": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "ADBE": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "AMAT": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "AMD": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "AMGN": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "BA": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "BK": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "CAT": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "CI": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "CMCSA": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "CME": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "COP": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "COST": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "CRM": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "CVX": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "D": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "DE": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "DHR": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "DIS": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "DUK": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "EA": {
+      "sessions": 1759,
+      "missing_dates": [
+        "2023-12-29"
+      ],
+      "missing_count": 1
+    },
+    "EOG": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "FDX": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "GE": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "GILD": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "GOOG": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "GS": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "HAL": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "INTC": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "KO": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "MRK": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "MS": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "MU": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "NEE": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "NKE": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "ORCL": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "OXY": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "PEP": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "QCOM": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "SPY": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "T": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "TJX": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "TMUS": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "UPS": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "USB": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "V": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "VLO": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "WFC": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "WMT": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    },
+    "XOM": {
+      "sessions": 1760,
+      "missing_dates": [],
+      "missing_count": 0
+    }
+  },
+  "sample_checks": [
+    {
+      "ticker": "AMD",
+      "prediction_date": "2017-05-01",
+      "case": "ordinary training day",
+      "entry": "2017-05-02",
+      "exit": "2017-05-08",
+      "dividend_events_in_outcome": [],
+      "inputs_checked": 300,
+      "maximum_input_error": 0.0,
+      "maximum_target_error": 2.0020096691553135e-13,
+      "company_return": -0.1440749911557998,
+      "spy_return": 0.0034332500451852432,
+      "excess_return": -0.14750824120098505
+    },
+    {
+      "ticker": "CMCSA",
+      "prediction_date": "2017-02-16",
+      "case": "2017 two-for-one split during holding",
+      "entry": "2017-02-17",
+      "exit": "2017-02-24",
+      "dividend_events_in_outcome": [],
+      "inputs_checked": 300,
+      "maximum_input_error": 0.0,
+      "maximum_target_error": 4.774652895278564e-14,
+      "company_return": -0.002106969442607687,
+      "spy_return": 0.011925502736640059,
+      "excess_return": -0.014032472179247746
+    },
+    {
+      "ticker": "TJX",
+      "prediction_date": "2018-11-05",
+      "case": "2018 two-for-one split during holding",
+      "entry": "2018-11-06",
+      "exit": "2018-11-12",
+      "dividend_events_in_outcome": [],
+      "inputs_checked": 300,
+      "maximum_input_error": 0.0,
+      "maximum_target_error": 4.717580492918927e-14,
+      "company_return": -0.010965110257052824,
+      "spy_return": -0.0027440067897224196,
+      "excess_return": -0.008221103467330404
+    },
+    {
+      "ticker": "NEE",
+      "prediction_date": "2020-10-23",
+      "case": "2020 four-for-one split during holding",
+      "entry": "2020-10-26",
+      "exit": "2020-10-30",
+      "dividend_events_in_outcome": [],
+      "inputs_checked": 300,
+      "maximum_input_error": 0.0,
+      "maximum_target_error": 1.3204715099135456e-14,
+      "company_return": -0.028013749611802474,
+      "spy_return": -0.04556743483608927,
+      "excess_return": 0.017553685224286797
+    },
+    {
+      "ticker": "GE",
+      "prediction_date": "2021-07-29",
+      "case": "2021 one-for-eight reverse split during holding",
+      "entry": "2021-07-30",
+      "exit": "2021-08-05",
+      "dividend_events_in_outcome": [],
+      "inputs_checked": 300,
+      "maximum_input_error": 0.0,
+      "maximum_target_error": 2.932376563791195e-14,
+      "company_return": -0.021466749224629322,
+      "spy_return": 0.008791483636597652,
+      "excess_return": -0.030258232861226975
+    },
+    {
+      "ticker": "MRK",
+      "prediction_date": "2021-03-10",
+      "case": "2021-03-12 dividend in outcome",
+      "entry": "2021-03-11",
+      "exit": "2021-03-17",
+      "dividend_events_in_outcome": [
+        {
+          "date": "2021-03-12",
+          "Dividends": 0.620229
+        }
+      ],
+      "inputs_checked": 300,
+      "maximum_input_error": 0.0,
+      "maximum_target_error": 1.1986939218999737e-14,
+      "company_return": 0.04124953744709381,
+      "spy_return": 0.012824028836505796,
+      "excess_return": 0.028425508610588013
+    },
+    {
+      "ticker": "EA",
+      "prediction_date": "2020-07-01",
+      "case": "EA source adjustment discontinuity during holding",
+      "entry": "2020-07-02",
+      "exit": "2020-07-09",
+      "dividend_events_in_outcome": [],
+      "inputs_checked": 300,
+      "maximum_input_error": 0.0,
+      "maximum_target_error": 3.304995166431013e-14,
+      "company_return": 0.01722625861136695,
+      "spy_return": 0.0004457123910663885,
+      "excess_return": 0.016780546220300563
+    },
+    {
+      "ticker": "EA",
+      "prediction_date": "2021-04-01",
+      "case": "archived ticker fallback",
+      "entry": "2021-04-05",
+      "exit": "2021-04-09",
+      "dividend_events_in_outcome": [],
+      "inputs_checked": 300,
+      "maximum_input_error": 0.0,
+      "maximum_target_error": 2.2142010447367966e-14,
+      "company_return": 0.021452727677779837,
+      "spy_return": 0.01990298500772214,
+      "excess_return": 0.0015497426700576966
+    }
+  ],
+  "split_cases": [
+    {
+      "ticker": "CMCSA",
+      "date": "2017-02-21",
+      "reported_split_ratio": 2.0,
+      "adjusted_close_change_pct": 0.6107254170711673,
+      "yahoo_volume_before": 20912987.0,
+      "yahoo_volume_after": 14464572.0,
+      "fnspid_volume_before": 19599800.0,
+      "yahoo_to_fnspid_volume_before": 1.0670000204083716
+    },
+    {
+      "ticker": "TJX",
+      "date": "2018-11-07",
+      "reported_split_ratio": 2.0,
+      "adjusted_close_change_pct": 1.1775369060660568,
+      "yahoo_volume_before": 5561600.0,
+      "yahoo_volume_after": 5858400.0,
+      "fnspid_volume_before": 5561600.0,
+      "yahoo_to_fnspid_volume_before": 1.0
+    },
+    {
+      "ticker": "NEE",
+      "date": "2020-10-27",
+      "reported_split_ratio": 4.0,
+      "adjusted_close_change_pct": 0.15531652963496345,
+      "yahoo_volume_before": 5707600.0,
+      "yahoo_volume_after": 4834200.0,
+      "fnspid_volume_before": 5707600.0,
+      "yahoo_to_fnspid_volume_before": 1.0
+    },
+    {
+      "ticker": "GE",
+      "date": "2021-08-02",
+      "reported_split_ratio": 0.125,
+      "adjusted_close_change_pct": -2.8957701585647477,
+      "yahoo_volume_before": 12050777.0,
+      "yahoo_volume_after": 39943542.0,
+      "fnspid_volume_before": 9617540.0,
+      "yahoo_to_fnspid_volume_before": 1.2529999355344505
+    }
+  ],
+  "ea_caveat": "EA uses FNSPID archived adjusted-close factors because Yahoo no longer serves delisted EA. Its factor had a false downward step on 2020-07-06; the post-step factor was carried backward. Dividend event amounts are unavailable for independent verification.",
+  "volume_conclusion": "Yahoo auto_adjust changes OHLC but does not apply another multiplier to Volume. Ordinary split dates show no split-sized price discontinuity and TJX/NEE volumes match the 2023 FNSPID snapshot. This supports using reported Volume without another adjustment, but unusual spin-offs are not independently resolved. Keep volume as an ablation, not a required primary input."
+}

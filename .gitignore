@@ -6,6 +6,7 @@ data/sample/
 
 # Model artifacts and local configuration
 models/
+data_local/
 checkpoints/
 .env
 .env.*
