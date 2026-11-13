@@ -1,0 +1,16 @@
+{
+  "net_return": 0.5123886316259376,
+  "annualized_return": 0.22246211844780017,
+  "sharpe": 4.068153038583184,
+  "max_drawdown": -0.02784413280171738,
+  "turnover": 58.475099824994906,
+  "total_costs": 7201.6386156853505,
+  "cost_drag": 0.0720163861568535,
+  "n_trades": 1526.0,
+  "avg_positions": 16.28131021194605,
+  "n_sessions": 519.0,
+  "start_date": "2022-01-04",
+  "end_date": "2023-12-29",
+  "spy_net_return": 0.03925528388995603,
+  "equal_weight_net_return": 0.2354907466549414
+}

@@ -1,0 +1,13 @@
+benchmark_ticker: SPY
+commission_bps: 5.0
+initial_capital: 100000.0
+max_buy_names: null
+max_position_pct: 0.05
+min_sell_fraction: 1.0
+neutral_threshold_pp: 0.25
+rebalance_every_sessions: 5
+slippage_bps: 5.0
+test_end: '2023-12-31'
+test_start: '2022-01-01'
+validation_end: '2021-12-31'
+validation_start: '2021-01-01'

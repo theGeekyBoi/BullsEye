@@ -1,0 +1,14 @@
+# BullsEye simulator configuration. Percent-point (pp) values match the SPY-relative prediction target.
+neutral_threshold_pp: 0.5      # |predicted diff vs SPY| must exceed this to buy (+) or sell (-)
+rebalance_every_sessions: 5    # matches the 5-session target horizon (no overlapping bets)
+max_buy_names: null            # set 5 to reproduce the rules-sheet "weekly top-five" test
+max_position_pct: 0.10         # cap per company, as share of portfolio value at the trade open
+min_sell_fraction: 0.25        # sell fraction for the sell candidate closest to the threshold
+commission_bps: 5.0
+slippage_bps: 5.0
+initial_capital: 100000.0
+benchmark_ticker: SPY
+validation_start: "2021-01-01"
+validation_end: "2021-12-31"
+test_start: "2022-01-01"
+test_end: "2023-12-31"
