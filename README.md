@@ -25,6 +25,7 @@ The current company group is the one used in the qualitative preparation branch.
 - [Current 50-company price rebuild and 2021 results](results/price_only_current/README.md)
 - [Price refinement results, shared predictions, and simulator prices](results/price_refinement/README.md)
 - [Follow-up price experiments and full results log](results/price_study/README.md)
+- [Price and news fusion and development comparison](fusion/README.md)
 - [Earlier 50-company price rebuild (archived)](price_only_v2/README.md)
 - [Earlier rebuild audit and 2021 validation report (archived)](results/price_only_v2/README.md)
 
