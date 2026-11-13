@@ -1,0 +1,33 @@
+{
+  "development_rows_checked": 24533,
+  "entry_date_mismatches": 0,
+  "max_abs_excess_return_delta_pp": 0.00016112592284107594,
+  "median_abs_excess_return_delta_pp": 2.0068722290413066e-05,
+  "ordinary_splits_checked": [
+    {
+      "ticker": "AAPL",
+      "date": "2020-08-31",
+      "split_ratio": 4.0,
+      "open_over_previous_close": 1.0222142020549854
+    },
+    {
+      "ticker": "GE",
+      "date": "2021-08-02",
+      "split_ratio": 0.125,
+      "open_over_previous_close": 1.0084942251064373
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2021-07-20",
+      "split_ratio": 4.0,
+      "open_over_previous_close": 0.9973508018148772
+    },
+    {
+      "ticker": "TSLA",
+      "date": "2020-08-31",
+      "split_ratio": 5.0,
+      "open_over_previous_close": 1.0043598609016158
+    }
+  ],
+  "reserved_outcomes_compared": false
+}
