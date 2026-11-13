@@ -45,7 +45,17 @@ def run(args):
     before_validation = joined.prediction_date.between("2021-01-01", args.validation_start, inclusive="left")
     joined = joined.loc[~before_validation]
     targets = targets.loc[~targets.prediction_date.between("2021-01-01", args.validation_start, inclusive="left")]
+    if args.validation_only:
+        joined = joined.loc[joined.prediction_date.str.startswith("2021-")]
+        targets = targets.loc[targets.prediction_date.str.startswith("2021-")]
+        if joined.empty:
+            raise ValueError("No price forecasts in the selected 2021 validation window")
     metrics, coverage_metrics = evaluate(joined, targets, args.price_model == TREND)
+    daily = joined.assign(blended=joined.news_status.eq("blended")).groupby("prediction_date").agg(
+        price_companies=("ticker", "size"), matched_companies=("blended", "sum"),
+    )
+    daily["price_fallback_companies"] = daily.price_companies - daily.matched_companies
+    daily["fallback_rate"] = daily.price_fallback_companies / daily.price_companies
 
     args.output.mkdir(parents=True, exist_ok=True)
     predictions = export_predictions(joined)
@@ -57,6 +67,7 @@ def run(args):
     metrics.insert(0, "run_type", "synthetic_demo" if args.demo else "development")
     metrics.to_csv(args.output / "comparison_metrics.csv", index=False)
     coverage_metrics.to_csv(args.output / "coverage.csv", index=False)
+    daily.to_csv(args.output / "daily_comparison_coverage.csv")
 
     paths = {"price": args.price, "coverage": args.coverage, "targets": args.targets, "universe": UNIVERSE}
     if args.price_model != TREND:
@@ -65,7 +76,7 @@ def run(args):
         paths["news"] = args.news
     manifest = {
         "run_type": "synthetic_demo" if args.demo else "development",
-        "years": [2020, 2021],
+        "years": [int(year) for year in coverage_metrics.year],
         "validation_start": args.validation_start,
         "price_rows_excluded_before_validation_start": int(before_validation.sum()),
         "price_model": args.price_model,
@@ -81,6 +92,7 @@ def run(args):
     (args.output / "run.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"{manifest['run_type']}: wrote {len(predictions):,} combined predictions to {args.output}")
     print(coverage_metrics.to_string(index=False))
+    print(f"Median matched companies per day: {daily.matched_companies.median():g}")
 
 
 def main():
@@ -97,6 +109,8 @@ def main():
     parser.add_argument("--coverage-flag", default=ELIGIBLE)
     parser.add_argument("--validation-start", default="2021-01-01",
                         help="First allowed validation date in 2021 (YYYY-MM-DD)")
+    parser.add_argument("--validation-only", action="store_true",
+                        help="Evaluate and export only 2021, using the 2021 outcome grid")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if bool(args.news_model) != bool(args.news):

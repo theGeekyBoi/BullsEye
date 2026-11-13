@@ -1,5 +1,8 @@
 # Price and news fusion
 
+[Dhruv’s gap search and 2021 comparison handoff](../To%20Do/05_DHRUV_SMALL_GAPS_AND_COMPARISON.md)
+includes the exact dates, input files, and commands.
+
 This pipeline joins price and news forecasts by ticker and prediction date.
 It averages their five-session excess-return predictions when the news
 coverage flag is true and a finite news forecast is present. Otherwise,
@@ -58,6 +61,7 @@ scaled trend forecasts.
 | combined_predictions.csv | Four-column forecast file for the simulator and dashboard |
 | comparison_metrics.csv | Yearly ranking, mean absolute error, direction accuracy, coverage, and top-five versus middle-ten results |
 | coverage.csv | Counts of blended rows and fallbacks by reason |
+| daily_comparison_coverage.csv | Counts of matched and fallback companies per prediction date |
 | news_usage_by_company_day.csv | Which forecasts used news on each ticker and date |
 | run.json | Input hashes, selected models, weights, and development period |
 | synthetic_news_predictions.csv | Demo-only input for reproducing the file import path |
