@@ -1,0 +1,18 @@
+{
+  "source_sha256": "4f53dd65e6fdcd424dc2bc6170ae57bfd80e5180a5cc29f421983c63baab4b42",
+  "output_sha256": "4e54bf6438811e6a4693260361dea5a654b5d72ed310ab9d2443dac79d05cd5b",
+  "rows": 89124,
+  "symbols_including_spy": 51,
+  "first_date": "2017-01-03",
+  "last_date": "2024-01-09",
+  "pltr_first_date": "2020-09-30",
+  "missing_sessions_after_listing": {},
+  "ordinary_split_rows": 7,
+  "non_standard_action_rows": 5,
+  "cash_distribution_rows": 1055,
+  "replay_basis": {
+    "total_return_units": "Fill at adjusted_open and mark at adjusted_close. Distribution and split effects are embedded.",
+    "cash_distribution_units": "Use open and close with cash_distribution. Prices are already split-adjusted. Review special actions separately."
+  },
+  "source": "Yahoo Finance via yfinance download with auto_adjust=False and actions=True."
+}

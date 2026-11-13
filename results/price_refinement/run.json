@@ -1,0 +1,155 @@
+{
+  "data_sha256": "bc8d75184e65b8c8e5a9c8f84eaf36c455b2fd26f6dd031faca59a467ead5fad",
+  "universe_sha256": "5ef65bfa95927d1f92b9cf4bfc9f052547c4728027c4329dbe420c7c90e43a7f",
+  "versions": {
+    "pandas": "3.1.1",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "development_rows": 61729,
+  "selection_by_prediction_year": {
+    "2020": "ridge_base",
+    "2021": "ridge_base"
+  },
+  "configuration": [
+    [
+      "ridge_base",
+      "ridge",
+      "base",
+      42
+    ],
+    [
+      "ridge_peer",
+      "ridge",
+      "peer",
+      42
+    ],
+    [
+      "ridge_peer_volume",
+      "ridge",
+      "peer_volume",
+      42
+    ],
+    [
+      "huber_peer",
+      "huber",
+      "peer",
+      42
+    ],
+    [
+      "ridge_recency",
+      "ridge_recency",
+      "peer",
+      42
+    ],
+    [
+      "tree_peer",
+      "tree",
+      "peer",
+      42
+    ],
+    [
+      "tree_peer_seed123",
+      "tree",
+      "peer",
+      123
+    ],
+    [
+      "rank_peer",
+      "rank",
+      "peer",
+      42
+    ],
+    [
+      "rank_peer_seed123",
+      "rank",
+      "peer",
+      123
+    ],
+    [
+      "ridge_monthly_1y",
+      "monthly_1y",
+      "base",
+      42
+    ],
+    [
+      "ridge_monthly_2y",
+      "monthly_2y",
+      "base",
+      42
+    ],
+    [
+      "ridge_rank_target",
+      "ridge_rank_target",
+      "base",
+      42
+    ]
+  ],
+  "fit_through_year": {
+    "2020": 2019,
+    "2021": 2020
+  },
+  "selection": "Highest average daily rank correlation over earlier folds only. Seed 123 and monthly refits are diagnostics. Use 5% scaled trend if the best fixed trial does not beat raw trend.",
+  "validation_2021": {
+    "selected": {
+      "rows": 12350,
+      "predicted_rows": 12350,
+      "coverage": 1.0,
+      "mae_percentage_points": 2.4097299628843643,
+      "sign_accuracy": 0.4905263157894737,
+      "mean_daily_spearman": -0.012215736497027962,
+      "ranked_days": 247,
+      "eligible_days": 247
+    },
+    "trend": {
+      "rows": 12350,
+      "predicted_rows": 12350,
+      "coverage": 1.0,
+      "mae_percentage_points": 3.4131567949546886,
+      "sign_accuracy": 0.5076923076923077,
+      "mean_daily_spearman": 0.024323186764584375,
+      "ranked_days": 247,
+      "eligible_days": 247
+    },
+    "shrunk_trend": {
+      "rows": 12350,
+      "predicted_rows": 12350,
+      "coverage": 1.0,
+      "mae_percentage_points": 2.3858253429938103,
+      "sign_accuracy": 0.5076923076923077,
+      "mean_daily_spearman": 0.024323186764584375,
+      "ranked_days": 247,
+      "eligible_days": 247
+    },
+    "trend_rank_95pct_interval": [
+      -0.029819665518029077,
+      0.07355758173714828
+    ],
+    "zero": {
+      "rows": 12350,
+      "predicted_rows": 12350,
+      "coverage": 1.0,
+      "mae_percentage_points": 2.3854744198283315,
+      "sign_accuracy": 0.5100404858299595,
+      "mean_daily_spearman": null,
+      "ranked_days": 0,
+      "eligible_days": 247
+    },
+    "paired_daily_rank_delta_vs_trend": -0.03653892326161233,
+    "paired_rank_delta_95pct_interval": [
+      -0.11858985861551097,
+      0.04062151824292467
+    ],
+    "top5_minus_middle10_pp": 0.04751186073257878,
+    "top5_minus_middle10_95pct_interval_pp": [
+      -0.7171777992732404,
+      0.7725936975391366
+    ],
+    "paired_mae_delta_vs_zero_pp": 0.024255543056032988,
+    "paired_mae_delta_95pct_interval_pp": [
+      0.008988335959049161,
+      0.04062159562013392
+    ]
+  },
+  "reserved_outcomes_loaded": false
+}

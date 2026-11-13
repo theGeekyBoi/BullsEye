@@ -1,5 +1,9 @@
 # BullsEye team branch handoff
 
+For the current assignment, Aaditya trains the headline model and Dhruv
+handles the small gap search and comparison. See
+[Dhruv’s current handoff](05_DHRUV_SMALL_GAPS_AND_COMPARISON.md).
+
 Everyone should use [**the BullsEye repository**](https://github.com/theGeekyBoi/BullsEye) and start from [**`integration/current-50-price-news`**](https://github.com/theGeekyBoi/BullsEye/tree/integration/current-50-price-news).
 
 An *integration branch* is an ordinary Git branch where we brought the price-model work and qualitative preparation together. It gives the team one common starting point: the current 50 companies, shared rules, price code, news tables, and existing checks. It is **not a finished model**. News coverage still needs work, and the price models still need improvement. I checked GitHub: `main` is currently behind this branch, so teammates should not start new work from `main` or from either older source branch.
