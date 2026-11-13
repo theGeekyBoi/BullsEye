@@ -79,3 +79,54 @@ belong to the separate portfolio replay.
 The runner evaluates only 2020–2021 and excludes outcomes that cross a year
 boundary. The 2022–2023 final test remains reserved. Running it will require
 a separate evaluation entry point after the team freezes the settings.
+
+## Proposed comparison dates for Dhruv and Aaditya
+
+Use the 50 tickers in the [current dataset summary](../final_dataset/dataset_summary.csv).
+Use eligible 2020 dates for fitting the news model and eligible 2021 dates
+for comparing forecasts. Keep outcomes within their respective year.
+Dhruv's draft split also skips the first five sessions of 2021. To match
+that split, use January 11 through December 23, 2021 for validation signals.
+This proposed window has 242 sessions and 12,100 price company-days before
+applying news coverage. The team should confirm the start date before
+publishing results. Existing runs retain their original dates.
+
+Use the same coverage flag and intersect by ticker and prediction date for
+the matched price, news and combined comparison. Report how many rows
+remain and retain the separate full-grid comparison. Send the news
+prediction CSV, model name, eligibility CSV, and training date range
+with the first real news handoff.
+
+```powershell
+python -m fusion.run --news data_local/news_predictions.csv --news-model finbert_ridge --validation-start 2021-01-11 --output data_local/fusion_development
+```
+
+## Simulator handoff for Bryce
+
+Generate the audited daily price export, then prepare inputs for the
+[simulator on quant_model](https://github.com/theGeekyBoi/BullsEye/tree/quant_model/Quant_Sim/bullseye_sim_project).
+The adapter exports 2021 only, converts decimal returns to percentage points
+once, includes SPY, and maps the dividend- and split-adjusted open and close
+to the simulator's price columns. Keep share counts labeled as simulated units.
+
+```powershell
+python -m price_refinement.daily_prices
+python -m fusion.run --demo --validation-start 2021-01-11 --output data_local/team_handoff_demo
+python -m fusion.replay_inputs --predictions results/price_refinement/predictions_2020_2021.csv --model price_trend_shrunk --start 2021-01-11 --output data_local/replay_price
+python -m fusion.replay_inputs --predictions data_local/team_handoff_demo/combined_predictions.csv --model synthetic_demo_fusion_equal_weight --output data_local/replay_combined
+```
+
+Each replay folder contains sim_predictions.csv and sim_daily_prices.csv.
+Pass those to the simulator's load_predictions and load_prices functions
+and run run_simulation with the same config, January 11 start date, and
+December 31 end date for both inputs. When real fusion forecasts arrive,
+pass the new combined_predictions.csv with model fusion_equal_weight.
+
+The development smoke test used simulator commit 8fc1ee5 and its default
+configuration. Each replay took 12,100 forecasts and 12,852 daily price
+rows (50 companies plus SPY). The synthetic blend used news on 5,145 of
+12,100 rows and fell back to price on 6,955. The simulator recorded 17
+price-only trades and 10 synthetic-fusion trades. All 27 used the next
+session's open, and cash and holdings passed the long-only checks.
+These counts verify the connection. The synthetic forecasts provide no
+evidence about the value of news.

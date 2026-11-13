@@ -42,6 +42,9 @@ def run(args):
     news = synthetic_news(price) if args.demo else read_predictions(args.news, args.news_model, universe)
     joined = combine(price, trend, news, coverage)
     targets, excluded = read_targets(args.targets, universe)
+    before_validation = joined.prediction_date.between("2021-01-01", args.validation_start, inclusive="left")
+    joined = joined.loc[~before_validation]
+    targets = targets.loc[~targets.prediction_date.between("2021-01-01", args.validation_start, inclusive="left")]
     metrics, coverage_metrics = evaluate(joined, targets, args.price_model == TREND)
 
     args.output.mkdir(parents=True, exist_ok=True)
@@ -63,6 +66,8 @@ def run(args):
     manifest = {
         "run_type": "synthetic_demo" if args.demo else "development",
         "years": [2020, 2021],
+        "validation_start": args.validation_start,
+        "price_rows_excluded_before_validation_start": int(before_validation.sum()),
         "price_model": args.price_model,
         "trend_model": TREND,
         "news_model": "synthetic_news" if args.demo else args.news_model,
@@ -90,10 +95,16 @@ def main():
     parser.add_argument("--targets", type=Path, default=TARGETS)
     parser.add_argument("--coverage", type=Path, default=COVERAGE)
     parser.add_argument("--coverage-flag", default=ELIGIBLE)
+    parser.add_argument("--validation-start", default="2021-01-01",
+                        help="First allowed validation date in 2021 (YYYY-MM-DD)")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if bool(args.news_model) != bool(args.news):
         parser.error("--news-model is required with --news and unavailable with --demo")
+    validation_start = pd.to_datetime(args.validation_start, format="%Y-%m-%d", errors="coerce")
+    if (pd.isna(validation_start) or validation_start.year != 2021
+            or validation_start.strftime("%Y-%m-%d") != args.validation_start):
+        parser.error("--validation-start must be a 2021 date in YYYY-MM-DD format")
     run(args)
 
 
